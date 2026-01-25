@@ -1098,6 +1098,7 @@ class LatentVisualDiffusion(LatentDiffusion):
             # x = torch.cat([x, x_extra], dim=1)
         ## encode video frames x to z via a 2D encoder
         z = self.encode_first_stage(x)
+        # img_latent = self.encode_first_stage(x_extra[:, :, cond_frame_index])
         
         last_obj_mask = x[:, :, -1]
         # set green channel to -1, no green color for the actor mask
@@ -1153,10 +1154,17 @@ class LatentVisualDiffusion(LatentDiffusion):
                 # img_cat_cond = torch.cat([img_latent, img_cat_cond], dim=1)
 
             else:
-                ## simply repeat the cond_frame to match the seq_len of z
-                # img_cat_cond = z_cat[:,:,cond_frame_index,:,:]
-                img_cat_cond = img_cat_cond.unsqueeze(2)
-                img_cat_cond = repeat(img_cat_cond, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2])
+                # latent of conditioning frame (from RGB video)
+                img_latent = self.encode_first_stage(x_extra[:, :, cond_frame_index])  # [b,4,h,w]
+                img_latent = img_latent.unsqueeze(2)                                   # [b,4,1,h,w]
+                img_latent = repeat(img_latent, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2])
+
+                # second 4ch latent to reach 8 channels (use the first-frame latent you already computed)
+                z0 = z_extra.unsqueeze(2)                                               # z_extra is encode_first_stage(x_extra[:,:,0])
+                z0 = repeat(z0, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2])
+
+                img_cat_cond = torch.cat([img_latent, z0], dim=1)                       # [b,8,t,h,w]
+
 
             cond["c_concat"] = [img_cat_cond] # b c t h w
         cond["c_crossattn"] = [torch.cat([prompt_imb, img_emb], dim=1)] ## concat in the seq_len dim

@@ -33,7 +33,7 @@ lightning.trainer.num_nodes=1
 # export LOCAL_RANK=0
 # export RANK=0
 # export WORLD_SIZE=0
-# CUDA_VISIBLE_DEVICES=0 python ./main/trainer.py \
+# CUDA_VISIBLE_DEVICES=0 python /simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
 # --base $config_file \
 # --train \
 # --name $name \
@@ -47,7 +47,7 @@ lightning.trainer.num_nodes=1
 # export LOCAL_RANK=0
 # export RANK=0
 # export WORLD_SIZE=0
-# CUDA_VISIBLE_DEVICES=0 python ./main/trainer.py \
+# CUDA_VISIBLE_DEVICES=0 python /simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
 # --base $config_file \
 # --val \
 # --name $name \

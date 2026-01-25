@@ -1,5 +1,5 @@
 model:
-  pretrained_checkpoint: /workspace/exp_outputs/checkpoints/dynamicrafter_512_v1/model.ckpt
+  pretrained_checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
   base_learning_rate: 1.0e-05
   scale_lr: False
   target: lvdm.models.ddpm3d_maskcat.LatentVisualDiffusion
@@ -141,9 +141,9 @@ data:
     train:
       target: lvdm.data.hoi4d.HOI4D
       params:
-        data_dir: /train_data/HOI4D
+        data_dir: /simurgh2/datasets/HOI4D
         # meta_path: /train_data/HOI4D/HOI4D-Instructions/train_hoi4d_train.csv
-        meta_path: /train_data/HOI4D/train_hoi4d.csv
+        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/train_hoi4d.csv # /train_data/HOI4D/train_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -156,9 +156,9 @@ data:
     validation:
       target: lvdm.data.hoi4d.HOI4D
       params:
-        data_dir: /train_data/HOI4D
+        data_dir: /simurgh2/datasets/HOI4D
         # meta_path: /train_data/HOI4D/HOI4D-Instructions/train_hoi4d_test.csv
-        meta_path: /train_data/HOI4D/test_hoi4d.csv
+        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/test_hoi4d.csv # /train_data/HOI4D/test_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true

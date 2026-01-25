@@ -1,5 +1,5 @@
 model:
-  pretrained_checkpoint: /workspace/exp_outputs/checkpoints/dynamicrafter_512_v1/model.ckpt
+  pretrained_checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
   base_learning_rate: 1.0e-05
   scale_lr: False
   target: lvdm.models.ddpm3d_maskgen.LatentVisualDiffusion
@@ -123,15 +123,15 @@ model:
 data:
   target: utils_data.DataModuleFromConfig
   params:
-    batch_size: 8
+    batch_size: 1
     val_batch_size: 1
-    num_workers: null
+    num_workers: 1
     wrap: false
     train:
       target: lvdm.data.hoi4d.HOI4D
       params:
-        data_dir: /train_data/HOI4D
-        meta_path: /train_data/HOI4D/train_hoi4d.csv
+        data_dir: /simurgh2/datasets/HOI4D
+        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/train_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -144,8 +144,8 @@ data:
     validation:
       target: lvdm.data.hoi4d.HOI4D
       params:
-        data_dir: /train_data/HOI4D
-        meta_path: /train_data/HOI4D/test_hoi4d.csv
+        data_dir: /simurgh2/datasets/HOI4D
+        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/train_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -176,7 +176,7 @@ lightning:
         save_top_k: 3
         filename: "{epoch}-{step}-{miou:.4f}-{mse:.4f}"
         save_weights_only: True
-        save_on_train_epoch_end: False
+        save_on_train_epoch_end: True
 
     batch_logger:
       target: callbacks.ImageLogger

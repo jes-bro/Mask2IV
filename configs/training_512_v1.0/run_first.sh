@@ -15,13 +15,13 @@ else
 fi
 
 # save_root="<YOUR_SAVE_ROOT_DIR>", for logs, checkpoints, tensorboard record, etc.
-save_root="/workspace/exp_outputs/first_stage/$1"
+save_root="/simurgh/u/jesb/feedback_gen/Mask2IV/exp_outputs/first_stage/$1"
 
 # run in multiple gpus
 HOST_GPU_NUM=2
-CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch \
+python -m torch.distributed.launch \
 --nproc_per_node=$HOST_GPU_NUM --nnodes=1 --master_addr=127.0.0.1 --master_port=12352 --node_rank=0 \
-./main/trainer.py \
+/simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
 --base $config_file \
 --train \
 --name $name \
@@ -33,7 +33,7 @@ lightning.trainer.num_nodes=1
 # export LOCAL_RANK=0
 # export RANK=0
 # export WORLD_SIZE=0
-# CUDA_VISIBLE_DEVICES=0 python ./main/trainer.py \
+# CUDA_VISIBLE_DEVICES=0 python /simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
 # --base $config_file \
 # --train \
 # --name $name \
@@ -46,7 +46,7 @@ lightning.trainer.num_nodes=1
 # export LOCAL_RANK=0
 # export RANK=0
 # export WORLD_SIZE=0
-# CUDA_VISIBLE_DEVICES=3 python ./main/trainer.py \
+# CUDA_VISIBLE_DEVICES=3 python /simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
 # --base $config_file \
 # --val \
 # --name $name \
