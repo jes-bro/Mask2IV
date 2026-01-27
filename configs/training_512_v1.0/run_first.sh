@@ -15,13 +15,13 @@ else
 fi
 
 # save_root="<YOUR_SAVE_ROOT_DIR>", for logs, checkpoints, tensorboard record, etc.
-save_root="/simurgh/u/jesb/feedback_gen/Mask2IV/exp_outputs/first_stage/$1"
+save_root="/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/first_stage/$1"
 
 # run in multiple gpus
 HOST_GPU_NUM=2
 python -m torch.distributed.launch \
 --nproc_per_node=$HOST_GPU_NUM --nnodes=1 --master_addr=127.0.0.1 --master_port=12352 --node_rank=0 \
-/simurgh/u/jesb/feedback_gen/Mask2IV/main/trainer.py \
+/simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py \
 --base $config_file \
 --train \
 --name $name \

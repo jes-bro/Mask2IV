@@ -123,15 +123,15 @@ model:
 data:
   target: utils_data.DataModuleFromConfig
   params:
-    batch_size: 1
+    batch_size: 2
     val_batch_size: 1
-    num_workers: 1
+    num_workers: 2
     wrap: false
     train:
       target: lvdm.data.hoi4d.HOI4D
       params:
         data_dir: /simurgh2/datasets/HOI4D
-        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/train_hoi4d.csv
+        meta_path: /simurgh2/projects/Mask2IV/Mask2IV/data_csv/train_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -145,7 +145,7 @@ data:
       target: lvdm.data.hoi4d.HOI4D
       params:
         data_dir: /simurgh2/datasets/HOI4D
-        meta_path: /simurgh/u/jesb/feedback_gen/Mask2IV/data_csv/train_hoi4d.csv
+        meta_path: /simurgh2/projects/Mask2IV/Mask2IV/data_csv/train_hoi4d.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -157,24 +157,23 @@ lightning:
   precision: 16
   # strategy: deepspeed_stage_2
   trainer:
+    max_epochs: 10000
+    limit_train_batches: 100
+    limit_val_batches: 2
+    check_val_every_n_epoch: 1
     benchmark: True
     accumulate_grad_batches: 2
-    max_steps: 100000
     # logger
     log_every_n_steps: 50
     # val
     # val_check_interval: 0.5
-    check_val_every_n_epoch: 2
     gradient_clip_algorithm: 'norm'
     gradient_clip_val: 0.5
   callbacks:
     model_checkpoint:
       target: pytorch_lightning.callbacks.ModelCheckpoint
       params:
-        monitor: miou
-        mode: max
-        save_top_k: 3
-        filename: "{epoch}-{step}-{miou:.4f}-{mse:.4f}"
+        filename: "{epoch}-{step}"
         save_weights_only: True
         save_on_train_epoch_end: True
 
