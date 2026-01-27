@@ -174,10 +174,12 @@ lightning:
       target: pytorch_lightning.callbacks.ModelCheckpoint
       params:
         filename: "{epoch}-{step}"
+        monitor: miou
+        mode: max
+        save_top_k: 3
         save_weights_only: True
         every_n_train_steps: 50
-        save_top_k: 3
-        save_on_train_epoch_end: True
+        save_on_train_epoch_end: False
 
     batch_logger:
       target: callbacks.ImageLogger
