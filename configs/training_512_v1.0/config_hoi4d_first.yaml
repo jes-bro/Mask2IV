@@ -123,9 +123,9 @@ model:
 data:
   target: utils_data.DataModuleFromConfig
   params:
-    batch_size: 2
+    batch_size: 8
     val_batch_size: 1
-    num_workers: 2
+    num_workers: 4
     wrap: false
     train:
       target: lvdm.data.hoi4d.HOI4D
@@ -158,7 +158,7 @@ lightning:
   # strategy: deepspeed_stage_2
   trainer:
     max_steps: 10000
-    limit_train_batches: 1000
+    # limit_train_batches: 1000
     limit_val_batches: 15 # reduce this and lim train batches if needed
     # check_val_every_n_epoch: 1
     benchmark: True
@@ -179,7 +179,7 @@ lightning:
         save_top_k: 3
         save_weights_only: True
         # every_n_train_steps: 50 
-        save_on_train_epoch_end: False
+        save_on_train_epoch_end: True
 
     batch_logger:
       target: callbacks.ImageLogger
