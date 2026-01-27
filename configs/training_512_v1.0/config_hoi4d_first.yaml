@@ -157,16 +157,16 @@ lightning:
   precision: 16
   # strategy: deepspeed_stage_2
   trainer:
-    # max_steps: 100000
-    limit_train_batches: 20
-    limit_val_batches: 10 # reduce this and lim train batches if needed
+    max_steps: 100000
+    # limit_train_batches: 20
+    # limit_val_batches: 10 # reduce this and lim train batches if needed
     check_val_every_n_epoch: 1
     benchmark: True
     accumulate_grad_batches: 2
     # logger
     log_every_n_steps: 50
     # val
-    # val_check_interval: 0.5
+    val_check_interval: 1000
     gradient_clip_algorithm: 'norm'
     gradient_clip_val: 0.5
   callbacks:
