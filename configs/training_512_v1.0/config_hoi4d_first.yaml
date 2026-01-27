@@ -160,7 +160,7 @@ lightning:
     max_steps: 100000
     # limit_train_batches: 20
     # limit_val_batches: 10 # reduce this and lim train batches if needed
-    check_val_every_n_epoch: 1
+    # check_val_every_n_epoch: 1
     benchmark: True
     accumulate_grad_batches: 2
     # logger
