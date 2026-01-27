@@ -108,7 +108,7 @@ class ImageLogger(Callback):
         ## different with validation_step() that saving the whole validation set and only keep the latest,
         ## it records the performance of every validation (without overwritten) by only keep a subset
         if batch_idx == 0 and trainer.is_global_zero:
-            print("VAL outputs keys:", outputs.keys() if isinstance(outputs, dict) else type(outputs))
+            print("VAL outputs keys:", outputs.keys() if isinstance(outputs, dict) else type(outputs), flush=True)
             mainlogger.info(f"VAL outputs keys: {list(outputs.keys()) if isinstance(outputs, dict) else type(outputs)}")
 
         if self.val_batch_freq != -1:
