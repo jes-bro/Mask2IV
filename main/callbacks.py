@@ -109,6 +109,7 @@ class ImageLogger(Callback):
         ## it records the performance of every validation (without overwritten) by only keep a subset
         if batch_idx == 0 and trainer.is_global_zero:
             print("VAL outputs keys:", outputs.keys() if isinstance(outputs, dict) else type(outputs))
+            mainlogger.info(f"VAL outputs keys: {list(outputs.keys()) if isinstance(outputs, dict) else type(outputs)}")
 
         if self.val_batch_freq != -1:
             batch_freq = 1 if self.to_local else 5 // trainer.num_devices
