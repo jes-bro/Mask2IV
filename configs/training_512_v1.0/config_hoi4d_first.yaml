@@ -157,7 +157,7 @@ lightning:
   precision: 16
   # strategy: deepspeed_stage_2
   trainer:
-    max_steps: 10000
+    max_steps: 100000
     # limit_train_batches: 1000
     limit_val_batches: 15 # reduce this and lim train batches if needed
     # check_val_every_n_epoch: 1

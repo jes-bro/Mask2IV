@@ -1104,6 +1104,9 @@ class LatentVisualDiffusion(LatentDiffusion):
         # set green channel to -1, no green color for the actor mask
         last_obj_mask[:, 1] = -1
         last_mask_z = self.encode_first_stage(last_obj_mask)
+        first_obj_mask = x[:, :, 0]
+        # keep green channel because we want it here
+        first_mask_z = self.encode_first_stage(first_obj_mask)
         
         ## get caption condition
         cond_input = batch[self.cond_stage_key]
@@ -1154,16 +1157,11 @@ class LatentVisualDiffusion(LatentDiffusion):
                 # img_cat_cond = torch.cat([img_latent, img_cat_cond], dim=1)
 
             else:
-                # latent of conditioning frame (from RGB video)
-                img_latent = self.encode_first_stage(x_extra[:, :, cond_frame_index])  # [b,4,h,w]
-                img_latent = img_latent.unsqueeze(2)                                   # [b,4,1,h,w]
-                img_latent = repeat(img_latent, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2])
-
-                # second 4ch latent to reach 8 channels (use the first-frame latent you already computed)
-                z0 = z_extra.unsqueeze(2)                                               # z_extra is encode_first_stage(x_extra[:,:,0])
-                z0 = repeat(z0, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2])
-
-                img_cat_cond = torch.cat([img_latent, z0], dim=1)                       # [b,8,t,h,w]
+                ## simply repeat the cond_frame to match the seq_len of z
+                # img_cat_cond = z_cat[:,:,cond_frame_index,:,:]
+                img_cat_cond = torch.cat([z_extra, first_mask_z], dim=1) #time dim removed from both in definitions, concat along channel like paper says
+                img_cat_cond = img_cat_cond.unsqueeze(2) # add time dim back in 
+                img_cat_cond = repeat(img_cat_cond, 'b c t h w -> b c (repeat t) h w', repeat=z.shape[2]) # Repeating over t frames (z and x share time dim) 
 
 
             cond["c_concat"] = [img_cat_cond] # b c t h w
