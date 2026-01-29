@@ -11,7 +11,7 @@ from utils.metrics.viclip import get_viclip, retrieve_text, _frame_from_video, g
 model_cfgs = {
     'viclip-l-internvid-10m-flt': {
         'size': 'l',
-        'pretrained': '/workspace/exp_outputs/ViCLIP-L_InternVid-FLT-10M.pth',
+        'pretrained': '/simurgh2/projects/Mask2IV/checkpoints/viclip/ViCLIP-L_InternVid-FLT-10M.pth',
     },
     'viclip-l-internvid-200m': {
         'size': 'l',
