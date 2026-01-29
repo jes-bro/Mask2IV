@@ -1,0 +1,8 @@
+Move Up 
+Move Down 
+Move Left
+Move Right
+Move Faster
+Move Slower
+Move More Gently
+Don't Move As Far
