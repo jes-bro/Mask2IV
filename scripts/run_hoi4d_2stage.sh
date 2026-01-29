@@ -1,11 +1,11 @@
 # version=$1 ##1024, 512, 256
 seed=42
 
-ckpt1="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/hoi4d_model.ckpt"
+ckpt1="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/first_stage/ckpt1.ckpt"
 config1=/simurgh2/projects/Mask2IV/Mask2IV/configs/inference_512_hoi4d_first.yaml
 
 # maskcat
-ckpt2="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/second_stage/hoi4d_model.ckpt"
+ckpt2="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/second_stage/ckpt2.ckpt"
 config2=/simurgh2/projects/Mask2IV/Mask2IV/configs/inference_512_hoi4d_maskcat.yaml
 
 prompt_dir=/simurgh2/projects/Mask2IV/Mask2IV/prompts
