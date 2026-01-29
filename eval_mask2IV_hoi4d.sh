@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --account=simurgh
 #SBATCH --partition=simurgh --qos=normal
-#SBATCH --time=168:00:00
+#SBATCH --time=24:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=256G
+#SBATCH --mem=64G
 
 # only use the following on partition with GPUs
-#SBATCH --gres=gpu:l40s:2
+#SBATCH --gres=gpu:l40s:1
 
 #SBATCH --job-name="hoi4d m2iv inf"
 #SBATCH --output=sample-%j.out
@@ -27,7 +27,7 @@ echo "working directory = "$SLURM_SUBMIT_DIR
 source ~/.bashrc
 conda deactivate
 conda activate dyncraft
-sh /simurgh2/projects/Mask2IV/Mask2IV/scripts/inference_hoi4d_2stage.py
+sh /simurgh2/projects/Mask2IV/Mask2IV/scripts/run_hoi4d_2stage.sh
 
 # can try the following to list out which GPU you have access to
 #srun /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery
