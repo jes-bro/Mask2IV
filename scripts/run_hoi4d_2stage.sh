@@ -12,7 +12,7 @@ prompt_dir=/simurgh2/projects/Mask2IV/Mask2IV/prompts
 res_dir="/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/Mask2IV-inference/maskcat/hoi4d"
 
 
-python3 /simurgh2/projects/Mask2IV/Mask2IV/scripts/evaluation/inference_hoi4d_2stage.py \
+python /simurgh2/projects/Mask2IV/Mask2IV/scripts/evaluation/inference_hoi4d_2stage.py \
 --seed ${seed} \
 --ckpt_path1 $ckpt1 \
 --ckpt_path2 $ckpt2 \
