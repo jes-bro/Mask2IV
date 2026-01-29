@@ -12,7 +12,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import parse_config
-torch.serialization.add_safe_globals({'ConfigParser': parse_config.ConfigParser})
+# torch.serialization.add_safe_globals({'ConfigParser': parse_config.ConfigParser})
 
 class FrozenInTime(BaseModel):
     def __init__(self,
@@ -33,7 +33,7 @@ class FrozenInTime(BaseModel):
         # pdb.set_trace()
         if self.text_params['model'].startswith('distilbert'):
             # self.text_model = AutoModel.from_pretrained('distilbert-base-uncased', cache_dir='metrics/egovlp/pretrained/distilbert-base-uncased')
-            self.text_model = AutoModel.from_pretrained('distilbert-base-uncased', cache_dir='/workspace/exp_outputs/checkpoints/egovlp/distilbert-base-uncased')
+            self.text_model = AutoModel.from_pretrained('distilbert-base-uncased', cache_dir='/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/checkpoints/egovlp/distilbert-base-uncased')
         else:
             self.text_model = AutoModel.from_pretrained(text_params['model'])
         self.text_model.train()
