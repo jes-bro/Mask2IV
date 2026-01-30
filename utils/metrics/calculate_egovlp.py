@@ -52,7 +52,7 @@ egovlp_model = getattr(module_arch, "FrozenInTime")(**egovlp_args)
 egovlp_model = egovlp_model.cuda()
 egovlp_model.eval().requires_grad_(False)
 
-tokenizer = transformers.AutoTokenizer.from_pretrained('distilbert-base-uncased', cache_dir='/simurgh2/Mask2IV/checkpoints/egovlp/distilbert-base-uncased', TOKENIZERS_PARALLELISM=False)
+tokenizer = transformers.AutoTokenizer.from_pretrained('distilbert-base-uncased', cache_dir='/simurgh2/projects/Mask2IV/checkpoints/egovlp/distilbert-base-uncased', TOKENIZERS_PARALLELISM=False)
 
 video_transforms = transforms.Compose([
     transforms.Resize(224),
