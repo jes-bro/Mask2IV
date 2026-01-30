@@ -97,7 +97,9 @@ def load_data_prompts(data_dir, save_dir, video_size=(256,256), video_frames=16,
     
     ## load video
     file_list = get_filelist(data_dir, ['jpg'])
+    print(file_list)
     prompt_list = [format_action(f.split('_')[-1].split('.')[0]) for f in file_list]
+    print(prompt_list)
     obj_list = [f.split('_')[-2].lower() for f in file_list]
     
     # fs_list = [(int(f.split('_')[-3]) - int(f.split('_')[-4]) + 1) // 16 for f in file_list]  # frame stride
