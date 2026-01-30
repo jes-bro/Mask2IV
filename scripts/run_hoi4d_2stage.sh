@@ -8,7 +8,7 @@ config1="/simurgh2/projects/Mask2IV/Mask2IV/configs/inference_512_hoi4d_first.ya
 ckpt2="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/second_stage/ckpt2.ckpt"
 config2="/simurgh2/projects/Mask2IV/Mask2IV/configs/inference_512_hoi4d_maskcat.yaml"
 
-prompt_dir="/simurgh2/projects/Mask2IV/Mask2IV/data_csv/val_hoi4d.csv"
+prompt_dir="/simurgh2/projects/Mask2IV/Mask2IV/prompts"
 res_dir="/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/Mask2IV-inference/maskcat/hoi4d"
 
 
