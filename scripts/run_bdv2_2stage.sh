@@ -1,14 +1,14 @@
 # version=$1 ##1024, 512, 256
 seed=42
 
-ckpt1=""
+ckpt1="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/first_stage/bdv2_model.ckpt"
 config1=configs/inference_512_bdv2_first.yaml
 
 # maskcat
-ckpt2=""
+ckpt2="/simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/second_stage/bdv2_model.ckpt"
 config2=configs/inference_512_bdv2_maskcat.yaml
 
-prompt_dir=prompts/bdv2
+prompt_dir="/simurgh2/projects/Mask2IV//Mask2IV/prompts/bdv2/"
 res_dir="./exp_outputs/Mask2IV-inference/maskcat/bdv2"
 
 
