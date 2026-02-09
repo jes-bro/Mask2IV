@@ -148,64 +148,65 @@ def load_checkpoints(model, model_cfg, ignore_keys=None, strict=True):
         mainlogger.info(">>> Load weights from pretrained checkpoint")
 
         pl_sd = torch.load(pretrained_ckpt, map_location="cpu")
-        try:
-            if 'state_dict' in pl_sd.keys():
-                if getattr(model_cfg.params, 'control_stage_config', None) is not None:
-                    strict = False
-                    remove_keys = []
-                    add_keys = []
-                    for k in pl_sd["state_dict"].keys():
-                        if 'model.diffusion_model' in k:
-                            k_new = k.replace('model.diffusion_model', 'model')
-                            remove_keys.append((k, k_new))
+        model.load_state_dict(pl_sd["state_dict"], strict=strict)
+    #     try:
+    #         if 'state_dict' in pl_sd.keys():
+    #             if getattr(model_cfg.params, 'control_stage_config', None) is not None:
+    #                 strict = False
+    #                 remove_keys = []
+    #                 add_keys = []
+    #                 for k in pl_sd["state_dict"].keys():
+    #                     if 'model.diffusion_model' in k:
+    #                         k_new = k.replace('model.diffusion_model', 'model')
+    #                         remove_keys.append((k, k_new))
                         
-                    for k in model.state_dict().keys():
-                        if 'control_model' in k and 'zero_convs' not in k and 'input_hint_block' not in k and 'middle_block_out' not in k and 'attn2_mask' not in k and 'norm2_2' not in k and 'obj_attn' not in k and 'mask_mlp' not in k and 'obj_mlp' not in k:
-                            add_keys.append(k)
+    #                 for k in model.state_dict().keys():
+    #                     if 'control_model' in k and 'zero_convs' not in k and 'input_hint_block' not in k and 'middle_block_out' not in k and 'attn2_mask' not in k and 'norm2_2' not in k and 'obj_attn' not in k and 'mask_mlp' not in k and 'obj_mlp' not in k:
+    #                         add_keys.append(k)
                     
-                    for (k, k_new) in remove_keys:
-                        pl_sd["state_dict"][k_new] = pl_sd["state_dict"][k].clone()
-                        del pl_sd['state_dict'][k]
+    #                 for (k, k_new) in remove_keys:
+    #                     pl_sd["state_dict"][k_new] = pl_sd["state_dict"][k].clone()
+    #                     del pl_sd['state_dict'][k]
                         
-                    for k in add_keys:
-                        pl_sd["state_dict"][k] = pl_sd["state_dict"][k.replace('control_model', 'model')].clone()
+    #                 for k in add_keys:
+    #                     pl_sd["state_dict"][k] = pl_sd["state_dict"][k.replace('control_model', 'model')].clone()
                 
-                if ignore_keys is not None:
-                    strict = False
-                    for key in ignore_keys:
-                        model.state_dict()[key].zero_()
-                        model.state_dict()[key][:, :8, :, :].copy_(pl_sd["state_dict"][key])
-                        pl_sd["state_dict"].pop(key, None)
+    #             if ignore_keys is not None:
+    #                 strict = False
+    #                 for key in ignore_keys:
+    #                     model.state_dict()[key].zero_()
+    #                     model.state_dict()[key][:, :8, :, :].copy_(pl_sd["state_dict"][key])
+    #                     pl_sd["state_dict"].pop(key, None)
                                             
-                # remove keys from pretrained checkpoint if the embedder is not CLIP
-                remove_keys = []
-                if 'CLIP' not in model_cfg.params.img_cond_stage_config.target:
-                    strict = False
-                    for k in pl_sd['state_dict'].keys():
-                        if 'image_proj_model.proj_in' in k or 'embedder' in k:
-                            remove_keys.append(k)
+    #             # remove keys from pretrained checkpoint if the embedder is not CLIP
+    #             remove_keys = []
+    #             if 'CLIP' not in model_cfg.params.img_cond_stage_config.target:
+    #                 strict = False
+    #                 for k in pl_sd['state_dict'].keys():
+    #                     if 'image_proj_model.proj_in' in k or 'embedder' in k:
+    #                         remove_keys.append(k)
 
-                if getattr(model_cfg.params, 'obj_cond_stage_config', None) is not None:
-                    strict = False
-                    for k in pl_sd['state_dict'].keys():
-                        if 'object_proj_model' in k or 'obj_embedder' in k:
-                            remove_keys.append(k)                    
+    #             if getattr(model_cfg.params, 'obj_cond_stage_config', None) is not None:
+    #                 strict = False
+    #                 for k in pl_sd['state_dict'].keys():
+    #                     if 'object_proj_model' in k or 'obj_embedder' in k:
+    #                         remove_keys.append(k)                    
 
-                for k in remove_keys:
-                    del pl_sd['state_dict'][k]
+    #             for k in remove_keys:
+    #                 del pl_sd['state_dict'][k]
                 
-                model.load_state_dict(pl_sd["state_dict"], strict=strict)
-                mainlogger.info(">>> Loaded weights from pretrained checkpoint: %s"%pretrained_ckpt)
-            else:
-                # deepspeed
-                new_pl_sd = OrderedDict()
-                for key in pl_sd['module'].keys():
-                    new_pl_sd[key[16:]]=pl_sd['module'][key]
-                model.load_state_dict(new_pl_sd, strict=True)
-        except:
-            model.load_state_dict(pl_sd)
-    else:
-        mainlogger.info(">>> Start training from scratch")
+    #             model.load_state_dict(pl_sd["state_dict"], strict=strict)
+    #             mainlogger.info(">>> Loaded weights from pretrained checkpoint: %s"%pretrained_ckpt)
+    #         else:
+    #             # deepspeed
+    #             new_pl_sd = OrderedDict()
+    #             for key in pl_sd['module'].keys():
+    #                 new_pl_sd[key[16:]]=pl_sd['module'][key]
+    #             model.load_state_dict(new_pl_sd, strict=True)
+    #     except:
+    #         model.load_state_dict(pl_sd)
+    # else:
+    #     mainlogger.info(">>> Start training from scratch")
 
     return model
 

@@ -12,7 +12,7 @@ prompt_dir="/simurgh2/projects/Mask2IV//Mask2IV/prompts/bdv2/"
 res_dir="./exp_outputs/Mask2IV-inference/maskcat/bdv2"
 
 
-CUDA_VISIBLE_DEVICES=0 python3 scripts/evaluation/inference_bdv2_2stage.py \
+CUDA_VISIBLE_DEVICES=0 python3 /simurgh2/projects/Mask2IV/Mask2IV/scripts/evaluation/inference_bdv2_2stage.py \
 --seed ${seed} \
 --ckpt_path1 $ckpt1 \
 --ckpt_path2 $ckpt2 \

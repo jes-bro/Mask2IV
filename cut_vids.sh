@@ -1,15 +1,11 @@
 #!/bin/bash
 #SBATCH --account=simurgh
 #SBATCH --partition=simurgh --qos=normal
-#SBATCH --time=168:00:00
+#SBATCH --time=01:00:00
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=256G
+#SBATCH --cpus-per-task=1
 
-# only use the following on partition with GPUs
-#SBATCH --gres=gpu:l40s:2
-
-#SBATCH --job-name="train mask2IV"
+#SBATCH --job-name="fix vids"
 #SBATCH --output=sample-%j.out
 
 # only use the following if you want email notification
@@ -26,8 +22,8 @@ echo "working directory = "$SLURM_SUBMIT_DIR
 # sample process (list hostnames of the nodes you've requested)
 source ~/.bashrc
 conda deactivate
-conda activate dyncraft
-sh /simurgh2/projects/Mask2IV/Mask2IV/configs/training_512_v1.0/run_first.sh bdv2
+conda activate sam3
+python3 /simurgh2/projects/Mask2IV/Mask2IV/convert_to_5fps.py
 
 # can try the following to list out which GPU you have access to
 #srun /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery

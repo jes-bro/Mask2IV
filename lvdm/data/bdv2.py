@@ -127,83 +127,64 @@ class BDV2(Dataset):
         return np.array(frames), masks
     
     def __getitem__(self, index):
-        if self.random_fs:
-            frame_stride = random.randint(self.frame_stride_min, self.frame_stride)
-        else:
-            frame_stride = self.frame_stride
 
-        ## get frames until success
-        while True:
-            # print('========================')
-            index = index % len(self.metadata)
-            sample = self.metadata.iloc[index]
-            video_path = os.path.join(sample['path'], 'images0')
-            if self.first_mask_path:
-                mask_path = os.path.join(self.first_mask_path, 'val', str(index))
-            else:
-                mask_path = os.path.join(sample['path'], 'masks')
+        index = index % len(self.metadata)
+        sample = self.metadata.iloc[index]
+        video_path = os.path.join(sample['path'], 'images0')
+        # if self.first_mask_path:
+        #     mask_path = os.path.join(self.first_mask_path, 'val', str(index))
+        # else:
+        #     mask_path = os.path.join(sample['path'], 'masks')
+        mask_path = os.path.join(sample['path'], 'masks')
+        # caption = sample['caption'].lower()
+        caption = "" # "Human places hands on the mannequin's chest"# " " (could have each atomic action there?)"a human preparing for cpr" # does zero shot without the caption with robot work better? hmm something to think about # or do the atomic action description?
+        object = str(sample['object']).lower()
+
+        # frame_num = len(os.listdir(video_path))
+
+        fps_ori = 5
+        frame_stride = 1
+        # start_idx = random.randint(0, 3) if frame_num >= self.video_length + 3 else random.randint(0, frame_num - self.video_length)
+
+        ## calculate frame indices
+        frame_indices = np.arange(16).astype(int)
+
+        try:
             
-            caption = sample['caption'].lower()
-            caption = "a robot gripper " + caption
-            object = str(sample['object']).lower()
-
-            frame_num = len(os.listdir(video_path))
-
-            if frame_num < self.video_length:
-                print(f"video ({video_path}) length ({frame_num}) is smaller than target length({self.video_length})")
-                index += 1
-                continue
+            frames, masks = self.read_frames(video_path, mask_path, frame_indices, 
+                                                raw_res=self.load_raw_resolution,
+                                                first_mask=self.first_mask_path is not None)
             
-            fps_ori = 15
-            frame_stride = frame_num // self.video_length
-            # start_idx = random.randint(0, 3) if frame_num >= self.video_length + 3 else random.randint(0, frame_num - self.video_length)
-
-            ## calculate frame indices
-            frame_indices = np.round(np.linspace(0, frame_num-1, self.video_length)).astype(int)
-
-            try:
-                
-                frames, masks = self.read_frames(video_path, mask_path, frame_indices, 
-                                                    raw_res=self.load_raw_resolution,
-                                                    first_mask=self.first_mask_path is not None)
-                
-                if len(frames) == 0 or len(masks) == 0:
-                    raise ValueError("Length of frames or masks is 0")
-                
-                if frames.shape[0] != self.video_length:
-                    raise ValueError(f"Length of frames is {frames.shape[0]}, which does not match the target length {self.video_length}")
-                
-                ## process data
-                assert(frames.shape[0] == self.video_length),f'{len(frames)}, self.video_length={self.video_length}'
-                frames = torch.tensor(frames).permute(3, 0, 1, 2).float() # [t,h,w,c] -> [c,t,h,w]
-                masks = torch.tensor(masks).permute(3, 0, 1, 2).float()
-                if self.first_mask_path is None:
-                    masks = format_mask(masks)
-
-                # divide the mask into 2 parts: hand and object
-                masks_f = masks.flatten(1)
-                bg_tensor = torch.tensor([0, 0, 0]).unsqueeze(-1)
-                bg_matches = (masks_f == bg_tensor).all(dim=0)
-                
-                # Use mask_attn in either 1 or 2
-                
-                # 1. get a mask attn with foreground only
-                mask_attn = ~bg_matches
-                mask_attn = mask_attn.reshape(masks.shape[1:]).unsqueeze(0)
-
-                break
-
-            except KeyboardInterrupt:
-                print("Interrupted by user. Exiting...")
-                break  # Exit the loop when Ctrl + C is pressed
+            if len(frames) == 0 or len(masks) == 0:
+                raise ValueError("Length of frames or masks is 0")
             
-            except Exception as e:
-                import traceback
-                traceback.print_exc()
-                print(f"Get frames failed! path = {video_path}; [max_ind vs frame_total:{max(frame_indices)} / {frame_num}]")
-                index += 1
-                continue
-        
+            if frames.shape[0] != self.video_length:
+                raise ValueError(f"Length of frames is {frames.shape[0]}, which does not match the target length {self.video_length}")
+            
+            ## process data
+            assert(frames.shape[0] == self.video_length),f'{len(frames)}, self.video_length={self.video_length}'
+            frames = torch.tensor(frames).permute(3, 0, 1, 2).float() # [t,h,w,c] -> [c,t,h,w]
+            masks = torch.tensor(masks).permute(3, 0, 1, 2).float()
+            # if self.first_mask_path is None:
+            #     masks = format_mask(masks)
+
+            # divide the mask into 2 parts: hand and object
+            masks_f = masks.flatten(1)
+            bg_tensor = torch.tensor([0, 0, 0]).unsqueeze(-1)
+            bg_matches = (masks_f == bg_tensor).all(dim=0)
+            
+            # Use mask_attn in either 1 or 2
+            
+            # 1. get a mask attn with foreground only
+            mask_attn = ~bg_matches
+            mask_attn = mask_attn.reshape(masks.shape[1:]).unsqueeze(0)
+
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            print(f"Get frames failed! path = {video_path}; [max_ind vs frame_total:{max(frame_indices)} / {frame_num}]")
+            index += 1
+    
         if self.spatial_transform is not None:
             frames = self.spatial_transform(frames)
             if not self.first_mask_path:

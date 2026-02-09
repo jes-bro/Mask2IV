@@ -1,0 +1,1688 @@
+SLURM_JOBID=14192532
+SLURM_JOB_NODELIST=simurgh1
+SLURM_NNODES=1
+SLURMTMPDIR=
+working directory = /simurgh2/projects/Mask2IV/Mask2IV
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[rank: 1] Global seed set to 42
+[rank: 0] Global seed set to 42
+@lightning version: 1.9.3 [>=1.8 required]
+***** Configing Model *****
+@lightning version: 1.9.3 [>=1.8 required]
+***** Configing Model *****
+LatentVisualDiffusion: Running in v-prediction mode
+LatentVisualDiffusion: Running in v-prediction mode
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+>>> Load weights from pretrained checkpoint
+INFO:mainlogger:>>> Load weights from pretrained checkpoint
+>>> Load weights from pretrained checkpoint
+INFO:mainlogger:>>> Load weights from pretrained checkpoint
+>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+INFO:mainlogger:>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+Running on 2=1x2 GPUs
+INFO:mainlogger:Running on 2=1x2 GPUs
+***** Configing Data *****
+INFO:mainlogger:***** Configing Data *****
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+train, HOI4D, 11851
+INFO:mainlogger:train, HOI4D, 11851
+validation, HOI4D, 11851
+INFO:mainlogger:validation, HOI4D, 11851
+***** Configing Trainer *****
+INFO:mainlogger:***** Configing Trainer *****
+***** Running the Loop *****
+INFO:mainlogger:***** Running the Loop *****
+<Training in DDPSharded Mode>
+INFO:mainlogger:<Training in DDPSharded Mode>
+[rank: 1] Global seed set to 42
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/2
+>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+INFO:mainlogger:>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+Running on 2=1x2 GPUs
+INFO:mainlogger:Running on 2=1x2 GPUs
+***** Configing Data *****
+INFO:mainlogger:***** Configing Data *****
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+train, HOI4D, 11851
+INFO:mainlogger:train, HOI4D, 11851
+validation, HOI4D, 11851
+INFO:mainlogger:validation, HOI4D, 11851
+***** Configing Trainer *****
+INFO:mainlogger:***** Configing Trainer *****
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/strategies/sharded.py:45: LightningDeprecationWarning: PyTorch Lightning's sharded implementation using FairScale has been deprecated in v1.9.0 and will be removed in v2.0.0. You can try using the `Trainer(strategy='fsdp_native')` instead. The difference is that native FSDP uses PyTorch's implementation and the current strategy uses FairScale's implementation (which was upstreamed to PyTorch). After removal, `strategy='fsdp'` will use the native version by default.
+  rank_zero_deprecation(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/lightning_fabric/plugins/environments/slurm.py:166: PossibleUserWarning: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py - ...
+  rank_zero_warn(
+Using 16bit None Automatic Mixed Precision (AMP)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/plugins/precision/sharded_native_amp.py:36: LightningDeprecationWarning: PyTorch Lightning's sharded implementation using FairScale has been deprecated in v1.9.0 and will be removed in v2.0.0. You can try using the `Trainer(strategy='fsdp_native')` instead. The difference is that native FSDP uses PyTorch's implementation and the current strategy uses FairScale's implementation (which was upstreamed to PyTorch). After removal, `strategy='fsdp'` will use the native version by default.
+  rank_zero_deprecation(
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+***** Running the Loop *****
+INFO:mainlogger:***** Running the Loop *****
+<Training in DDPSharded Mode>
+INFO:mainlogger:<Training in DDPSharded Mode>
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/lightning_fabric/plugins/environments/slurm.py:166: PossibleUserWarning: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py - ...
+  rank_zero_warn(
+[rank: 0] Global seed set to 42
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:613: UserWarning: Checkpoint directory /simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/first_stage/hoi4d/exp1/checkpoints exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1]
+@Training [1138/1516] of Full Paramters.
+INFO:mainlogger:@Training [1138/1516] of Full Paramters.
+@Training [51] Paramters for Image_proj_model.
+INFO:mainlogger:@Training [51] Paramters for Image_proj_model.
+@Training [1138/1516] of Full Paramters.
+INFO:mainlogger:@Training [1138/1516] of Full Paramters.
+@Training [51] Paramters for Image_proj_model.
+INFO:mainlogger:@Training [51] Paramters for Image_proj_model.
+
+  | Name              | Type                          | Params
+--------------------------------------------------------------------
+0 | model             | DiffusionWrapper              | 1.4 B 
+1 | first_stage_model | AutoencoderKL                 | 83.7 M
+2 | cond_stage_model  | FrozenOpenCLIPEmbedder        | 354 M 
+3 | embedder          | FrozenOpenCLIPImageEmbedderV2 | 683 M 
+4 | image_proj_model  | Resampler                     | 48.8 M
+--------------------------------------------------------------------
+1.2 B     Trainable params
+1.4 B     Non-trainable params
+2.6 B     Total params
+5,218.281 Total estimated model params size (MB)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:224: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:224: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 128 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Training: 0it [00:00, ?it/s]Training:   0%|          | 0/174817 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/174817 [00:00<?, ?it/s] /simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/xformers/ops/fmha/flash.py:338: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  and inp.query.storage().data_ptr() == inp.key.storage().data_ptr()
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/xformers/ops/fmha/flash.py:338: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  and inp.query.storage().data_ptr() == inp.key.storage().data_ptr()
+Epoch 0:   0%|          | 1/174817 [00:47<2285:43:18, 47.07s/it]Epoch 0:   0%|          | 1/174817 [00:47<2285:46:50, 47.07s/it, loss=0.0455, v_num=6]Epoch 0:   0%|          | 2/174817 [00:51<1239:07:23, 25.52s/it, loss=0.0455, v_num=6]Epoch 0:   0%|          | 2/174817 [00:51<1244:19:09, 25.62s/it, loss=0.0536, v_num=6]Epoch 0:   0%|          | 3/174817 [00:54<886:09:22, 18.25s/it, loss=0.0536, v_num=6] Epoch 0:   0%|          | 3/174817 [00:54<889:28:20, 18.32s/it, loss=0.0509, v_num=6]Epoch 0:   0%|          | 4/174817 [00:58<714:51:53, 14.72s/it, loss=0.0509, v_num=6]Epoch 0:   0%|          | 4/174817 [00:59<717:25:04, 14.77s/it, loss=0.0497, v_num=6]Epoch 0:   0%|          | 5/174817 [01:02<605:58:11, 12.48s/it, loss=0.0497, v_num=6]Epoch 0:   0%|          | 5/174817 [01:02<607:57:41, 12.52s/it, loss=0.0508, v_num=6]Epoch 0:   0%|          | 6/174817 [01:06<537:34:46, 11.07s/it, loss=0.0508, v_num=6]Epoch 0:   0%|          | 6/174817 [01:06<539:16:42, 11.11s/it, loss=0.052, v_num=6] Epoch 0:   0%|          | 7/174817 [01:09<485:16:18,  9.99s/it, loss=0.052, v_num=6]Epoch 0:   0%|          | 7/174817 [01:10<486:41:07, 10.02s/it, loss=0.0559, v_num=6]Epoch 0:   0%|          | 8/174817 [01:13<448:54:41,  9.24s/it, loss=0.0559, v_num=6]Epoch 0:   0%|          | 8/174817 [01:14<450:11:00,  9.27s/it, loss=0.0533, v_num=6]Epoch 0:   0%|          | 9/174817 [01:17<418:00:45,  8.61s/it, loss=0.0533, v_num=6]Epoch 0:   0%|          | 9/174817 [01:17<419:06:53,  8.63s/it, loss=0.055, v_num=6] Epoch 0:   0%|          | 10/174817 [01:21<395:47:23,  8.15s/it, loss=0.055, v_num=6]Epoch 0:   0%|          | 10/174817 [01:21<396:48:43,  8.17s/it, loss=0.0535, v_num=6]Epoch 0:   0%|          | 11/174817 [01:25<375:25:15,  7.73s/it, loss=0.0535, v_num=6]Epoch 0:   0%|          | 11/174817 [01:25<376:19:38,  7.75s/it, loss=0.0621, v_num=6]Epoch 0:   0%|          | 12/174817 [01:29<360:29:44,  7.42s/it, loss=0.0621, v_num=6]Epoch 0:   0%|          | 12/174817 [01:29<361:20:35,  7.44s/it, loss=0.0612, v_num=6]Epoch 0:   0%|          | 13/174817 [01:32<345:54:48,  7.12s/it, loss=0.0612, v_num=6]Epoch 0:   0%|          | 13/174817 [01:32<346:40:42,  7.14s/it, loss=0.0611, v_num=6]Epoch 0:   0%|          | 14/174817 [01:36<335:11:35,  6.90s/it, loss=0.0611, v_num=6]Epoch 0:   0%|          | 14/174817 [01:36<335:55:13,  6.92s/it, loss=0.0641, v_num=6]Epoch 0:   0%|          | 15/174817 [01:40<324:14:27,  6.68s/it, loss=0.0641, v_num=6]Epoch 0:   0%|          | 15/174817 [01:40<324:54:00,  6.69s/it, loss=0.112, v_num=6] Epoch 0:   0%|          | 16/174817 [01:44<315:59:26,  6.51s/it, loss=0.112, v_num=6]Epoch 0:   0%|          | 16/174817 [01:44<315:59:33,  6.51s/it, loss=0.112, v_num=6]Epoch 0:   0%|          | 17/174817 [01:47<306:54:16,  6.32s/it, loss=0.112, v_num=6]Epoch 0:   0%|          | 17/174817 [01:47<307:29:26,  6.33s/it, loss=0.106, v_num=6]Epoch 0:   0%|          | 18/174817 [01:51<300:46:10,  6.19s/it, loss=0.106, v_num=6]Epoch 0:   0%|          | 18/174817 [01:51<301:19:58,  6.21s/it, loss=0.102, v_num=6]Epoch 0:   0%|          | 19/174817 [01:55<293:59:04,  6.05s/it, loss=0.102, v_num=6]Epoch 0:   0%|          | 19/174817 [01:55<294:30:22,  6.07s/it, loss=0.131, v_num=6]Epoch 0:   0%|          | 20/174817 [01:59<289:03:24,  5.95s/it, loss=0.131, v_num=6]Epoch 0:   0%|          | 20/174817 [01:59<289:33:58,  5.96s/it, loss=0.127, v_num=6]Epoch 0:   0%|          | 21/174817 [02:02<283:26:32,  5.84s/it, loss=0.127, v_num=6]Epoch 0:   0%|          | 21/174817 [02:02<283:55:07,  5.85s/it, loss=0.139, v_num=6]Epoch 0:   0%|          | 22/174817 [02:06<279:28:46,  5.76s/it, loss=0.139, v_num=6]Epoch 0:   0%|          | 22/174817 [02:06<279:56:44,  5.77s/it, loss=0.141, v_num=6]Epoch 0:   0%|          | 23/174817 [02:11<278:24:24,  5.73s/it, loss=0.141, v_num=6]Epoch 0:   0%|          | 23/174817 [02:12<278:50:17,  5.74s/it, loss=0.141, v_num=6]Epoch 0:   0%|          | 24/174817 [02:15<274:53:43,  5.66s/it, loss=0.141, v_num=6]Epoch 0:   0%|          | 24/174817 [02:16<275:19:15,  5.67s/it, loss=0.143, v_num=6]Epoch 0:   0%|          | 25/174817 [02:20<273:14:29,  5.63s/it, loss=0.143, v_num=6]Epoch 0:   0%|          | 25/174817 [02:20<273:38:15,  5.64s/it, loss=0.142, v_num=6]Epoch 0:   0%|          | 26/174817 [02:24<270:11:25,  5.56s/it, loss=0.142, v_num=6]Epoch 0:   0%|          | 26/174817 [02:24<270:35:04,  5.57s/it, loss=0.14, v_num=6] Epoch 0:   0%|          | 27/174817 [02:28<267:34:36,  5.51s/it, loss=0.14, v_num=6]Epoch 0:   0%|          | 27/174817 [02:29<267:56:39,  5.52s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 28/174817 [02:32<264:48:06,  5.45s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 28/174817 [02:32<264:48:11,  5.45s/it, loss=0.17, v_num=6] Epoch 0:   0%|          | 29/174817 [02:37<264:24:39,  5.45s/it, loss=0.17, v_num=6]Epoch 0:   0%|          | 29/174817 [02:38<264:45:12,  5.45s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 30/174817 [02:41<262:04:19,  5.40s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 30/174817 [02:42<262:24:43,  5.40s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 31/174817 [02:46<260:12:17,  5.36s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 31/174817 [02:46<260:31:33,  5.37s/it, loss=0.165, v_num=6]Epoch 0:   0%|          | 32/174817 [02:50<258:08:12,  5.32s/it, loss=0.165, v_num=6]Epoch 0:   0%|          | 32/174817 [02:50<258:27:25,  5.32s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 33/174817 [02:54<256:28:17,  5.28s/it, loss=0.169, v_num=6]Epoch 0:   0%|          | 33/174817 [02:54<256:46:21,  5.29s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 34/174817 [02:58<254:38:00,  5.24s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 34/174817 [02:58<254:56:06,  5.25s/it, loss=0.164, v_num=6]Epoch 0:   0%|          | 35/174817 [03:03<254:35:11,  5.24s/it, loss=0.164, v_num=6]Epoch 0:   0%|          | 35/174817 [03:03<254:52:06,  5.25s/it, loss=0.128, v_num=6]Epoch 0:   0%|          | 36/174817 [03:07<252:54:05,  5.21s/it, loss=0.128, v_num=6]Epoch 0:   0%|          | 36/174817 [03:07<253:11:03,  5.21s/it, loss=0.126, v_num=6]Epoch 0:   0%|          | 37/174817 [03:12<251:58:53,  5.19s/it, loss=0.126, v_num=6]Epoch 0:   0%|          | 37/174817 [03:12<252:14:57,  5.20s/it, loss=0.145, v_num=6]Epoch 0:   0%|          | 38/174817 [03:16<250:27:13,  5.16s/it, loss=0.145, v_num=6]Epoch 0:   0%|          | 38/174817 [03:16<250:43:19,  5.16s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 39/174817 [03:19<248:36:26,  5.12s/it, loss=0.168, v_num=6]Epoch 0:   0%|          | 39/174817 [03:19<248:51:46,  5.13s/it, loss=0.137, v_num=6]Epoch 0:   0%|          | 40/174817 [03:23<247:15:05,  5.09s/it, loss=0.137, v_num=6]Epoch 0:   0%|          | 40/174817 [03:23<247:30:24,  5.10s/it, loss=0.147, v_num=6]Epoch 0:   0%|          | 41/174817 [03:27<245:57:08,  5.07s/it, loss=0.147, v_num=6]Epoch 0:   0%|          | 41/174817 [03:27<246:11:42,  5.07s/it, loss=0.137, v_num=6]Epoch 0:   0%|          | 42/174817 [03:31<244:43:45,  5.04s/it, loss=0.137, v_num=6]Epoch 0:   0%|          | 42/174817 [03:31<244:58:18,  5.05s/it, loss=0.135, v_num=6]Epoch 0:   0%|          | 43/174817 [03:35<243:01:51,  5.01s/it, loss=0.135, v_num=6]Epoch 0:   0%|          | 43/174817 [03:35<243:15:42,  5.01s/it, loss=0.133, v_num=6]Epoch 0:   0%|          | 44/174817 [03:39<241:57:14,  4.98s/it, loss=0.133, v_num=6]Epoch 0:   0%|          | 44/174817 [03:39<242:11:11,  4.99s/it, loss=0.131, v_num=6]Epoch 0:   0%|          | 45/174817 [03:42<240:23:13,  4.95s/it, loss=0.131, v_num=6]Epoch 0:   0%|          | 45/174817 [03:43<240:36:30,  4.96s/it, loss=0.132, v_num=6]Epoch 0:   0%|          | 46/174817 [03:46<239:24:51,  4.93s/it, loss=0.132, v_num=6]Epoch 0:   0%|          | 46/174817 [03:47<239:38:09,  4.94s/it, loss=0.134, v_num=6]Epoch 0:   0%|          | 47/174817 [03:50<238:26:36,  4.91s/it, loss=0.134, v_num=6]Epoch 0:   0%|          | 47/174817 [03:51<238:39:15,  4.92s/it, loss=0.106, v_num=6]Epoch 0:   0%|          | 48/174817 [03:54<237:31:00,  4.89s/it, loss=0.106, v_num=6]Epoch 0:   0%|          | 48/174817 [03:55<237:43:43,  4.90s/it, loss=0.105, v_num=6]Epoch 0:   0%|          | 49/174817 [03:58<236:23:56,  4.87s/it, loss=0.105, v_num=6]Epoch 0:   0%|          | 49/174817 [03:58<236:36:08,  4.87s/it, loss=0.104, v_num=6]Epoch 0:   0%|          | 50/174817 [04:02<235:33:05,  4.85s/it, loss=0.104, v_num=6]Epoch 0:   0%|          | 50/174817 [04:02<235:45:21,  4.86s/it, loss=0.104, v_num=6]Epoch 0:   0%|          | 51/174817 [04:06<234:28:16,  4.83s/it, loss=0.104, v_num=6]Epoch 0:   0%|          | 51/174817 [04:06<234:39:57,  4.83s/it, loss=0.105, v_num=6]Epoch 0:   0%|          | 52/174817 [04:10<233:40:57,  4.81s/it, loss=0.105, v_num=6]Epoch 0:   0%|          | 52/174817 [04:10<233:52:42,  4.82s/it, loss=0.0995, v_num=6]Epoch 0:   0%|          | 53/174817 [04:14<232:55:02,  4.80s/it, loss=0.0995, v_num=6]Epoch 0:   0%|          | 53/174817 [04:14<233:06:20,  4.80s/it, loss=0.102, v_num=6] Epoch 0:   0%|          | 54/174817 [04:18<232:12:30,  4.78s/it, loss=0.102, v_num=6]Epoch 0:   0%|          | 54/174817 [04:18<232:23:52,  4.79s/it, loss=0.103, v_num=6]Epoch 0:   0%|          | 55/174817 [04:22<231:25:57,  4.77s/it, loss=0.103, v_num=6]Epoch 0:   0%|          | 55/174817 [04:22<231:36:48,  4.77s/it, loss=0.102, v_num=6]Epoch 0:   0%|          | 56/174817 [04:26<230:45:39,  4.75s/it, loss=0.102, v_num=6]Epoch 0:   0%|          | 56/174817 [04:26<230:56:37,  4.76s/it, loss=0.1, v_num=6]  Epoch 0:   0%|          | 57/174817 [04:30<230:06:28,  4.74s/it, loss=0.1, v_num=6]Epoch 0:   0%|          | 57/174817 [04:30<230:16:57,  4.74s/it, loss=0.0824, v_num=6]Epoch 0:   0%|          | 58/174817 [04:34<229:29:05,  4.73s/it, loss=0.0824, v_num=6]Epoch 0:   0%|          | 58/174817 [04:34<229:39:38,  4.73s/it, loss=0.0609, v_num=6]Epoch 0:   0%|          | 59/174817 [04:38<229:03:06,  4.72s/it, loss=0.0609, v_num=6]Epoch 0:   0%|          | 59/174817 [04:38<229:13:13,  4.72s/it, loss=0.0634, v_num=6]Epoch 0:   0%|          | 60/174817 [04:42<228:28:24,  4.71s/it, loss=0.0634, v_num=6]Epoch 0:   0%|          | 60/174817 [04:42<228:38:39,  4.71s/it, loss=0.0583, v_num=6]Epoch 0:   0%|          | 61/174817 [04:46<228:19:58,  4.70s/it, loss=0.0583, v_num=6]Epoch 0:   0%|          | 61/174817 [04:47<228:29:44,  4.71s/it, loss=0.0555, v_num=6]Epoch 0:   0%|          | 62/174817 [04:50<227:45:57,  4.69s/it, loss=0.0555, v_num=6]Epoch 0:   0%|          | 62/174817 [04:51<227:55:53,  4.70s/it, loss=0.0549, v_num=6]Epoch 0:   0%|          | 63/174817 [04:55<227:22:50,  4.68s/it, loss=0.0549, v_num=6]Epoch 0:   0%|          | 63/174817 [04:55<227:32:19,  4.69s/it, loss=0.0631, v_num=6]Epoch 0:   0%|          | 64/174817 [04:59<226:51:56,  4.67s/it, loss=0.0631, v_num=6]Epoch 0:   0%|          | 64/174817 [04:59<227:01:29,  4.68s/it, loss=0.0632, v_num=6]Epoch 0:   0%|          | 65/174817 [05:02<226:00:06,  4.66s/it, loss=0.0632, v_num=6]Epoch 0:   0%|          | 65/174817 [05:02<226:09:15,  4.66s/it, loss=0.0634, v_num=6]Epoch 0:   0%|          | 66/174817 [05:06<225:33:00,  4.65s/it, loss=0.0634, v_num=6]Epoch 0:   0%|          | 66/174817 [05:06<225:42:21,  4.65s/it, loss=0.0626, v_num=6]Epoch 0:   0%|          | 67/174817 [05:10<224:44:34,  4.63s/it, loss=0.0626, v_num=6]Epoch 0:   0%|          | 67/174817 [05:10<224:53:28,  4.63s/it, loss=0.0614, v_num=6]Epoch 0:   0%|          | 68/174817 [05:14<224:23:04,  4.62s/it, loss=0.0614, v_num=6]Epoch 0:   0%|          | 68/174817 [05:14<224:32:03,  4.63s/it, loss=0.0614, v_num=6]Epoch 0:   0%|          | 69/174817 [05:17<223:37:12,  4.61s/it, loss=0.0614, v_num=6]Epoch 0:   0%|          | 69/174817 [05:18<223:45:51,  4.61s/it, loss=0.0626, v_num=6]Epoch 0:   0%|          | 70/174817 [05:21<223:12:28,  4.60s/it, loss=0.0626, v_num=6]Epoch 0:   0%|          | 70/174817 [05:22<223:21:12,  4.60s/it, loss=0.0625, v_num=6]Epoch 0:   0%|          | 71/174817 [05:25<222:27:56,  4.58s/it, loss=0.0625, v_num=6]Epoch 0:   0%|          | 71/174817 [05:25<222:36:21,  4.59s/it, loss=0.06, v_num=6]  Epoch 0:   0%|          | 72/174817 [05:29<222:07:55,  4.58s/it, loss=0.06, v_num=6]Epoch 0:   0%|          | 72/174817 [05:29<222:16:23,  4.58s/it, loss=0.0598, v_num=6]Epoch 0:   0%|          | 73/174817 [05:33<221:25:40,  4.56s/it, loss=0.0598, v_num=6]Epoch 0:   0%|          | 73/174817 [05:33<221:33:51,  4.56s/it, loss=0.059, v_num=6] Epoch 0:   0%|          | 74/174817 [05:37<221:05:57,  4.56s/it, loss=0.059, v_num=6]Epoch 0:   0%|          | 74/174817 [05:37<221:14:14,  4.56s/it, loss=0.0635, v_num=6]Epoch 0:   0%|          | 75/174817 [05:40<220:25:31,  4.54s/it, loss=0.0635, v_num=6]Epoch 0:   0%|          | 75/174817 [05:40<220:33:27,  4.54s/it, loss=0.0721, v_num=6]Epoch 0:   0%|          | 76/174817 [05:44<220:06:40,  4.53s/it, loss=0.0721, v_num=6]Epoch 0:   0%|          | 76/174817 [05:44<220:14:45,  4.54s/it, loss=0.0724, v_num=6]Epoch 0:   0%|          | 77/174817 [05:48<219:28:41,  4.52s/it, loss=0.0724, v_num=6]Epoch 0:   0%|          | 77/174817 [05:48<219:36:27,  4.52s/it, loss=0.0716, v_num=6]Epoch 0:   0%|          | 78/174817 [05:52<219:10:26,  4.52s/it, loss=0.0716, v_num=6]Epoch 0:   0%|          | 78/174817 [05:52<219:18:17,  4.52s/it, loss=0.0727, v_num=6]Epoch 0:   0%|          | 79/174817 [05:55<218:33:25,  4.50s/it, loss=0.0727, v_num=6]Epoch 0:   0%|          | 79/174817 [05:55<218:40:59,  4.51s/it, loss=0.0707, v_num=6]Epoch 0:   0%|          | 80/174817 [05:59<218:17:27,  4.50s/it, loss=0.0707, v_num=6]Epoch 0:   0%|          | 80/174817 [05:59<218:25:11,  4.50s/it, loss=0.0648, v_num=6]Epoch 0:   0%|          | 81/174817 [06:03<217:42:08,  4.49s/it, loss=0.0648, v_num=6]Epoch 0:   0%|          | 81/174817 [06:03<217:49:28,  4.49s/it, loss=0.0861, v_num=6]Epoch 0:   0%|          | 82/174817 [06:07<217:27:32,  4.48s/it, loss=0.0861, v_num=6]Epoch 0:   0%|          | 82/174817 [06:07<217:35:01,  4.48s/it, loss=0.0861, v_num=6]Epoch 0:   0%|          | 83/174817 [06:10<216:53:37,  4.47s/it, loss=0.0861, v_num=6]Epoch 0:   0%|          | 83/174817 [06:11<217:00:50,  4.47s/it, loss=0.0798, v_num=6]Epoch 0:   0%|          | 84/174817 [06:14<216:39:55,  4.46s/it, loss=0.0798, v_num=6]Epoch 0:   0%|          | 84/174817 [06:15<216:47:13,  4.47s/it, loss=0.0805, v_num=6]Epoch 0:   0%|          | 85/174817 [06:18<216:21:17,  4.46s/it, loss=0.0805, v_num=6]Epoch 0:   0%|          | 85/174817 [06:19<216:28:18,  4.46s/it, loss=0.0789, v_num=6]Epoch 0:   0%|          | 86/174817 [06:22<216:05:28,  4.45s/it, loss=0.0789, v_num=6]Epoch 0:   0%|          | 86/174817 [06:23<216:12:35,  4.45s/it, loss=0.0797, v_num=6]Epoch 0:   0%|          | 87/174817 [06:26<215:42:26,  4.44s/it, loss=0.0797, v_num=6]Epoch 0:   0%|          | 87/174817 [06:26<215:49:18,  4.45s/it, loss=0.0809, v_num=6]Epoch 0:   0%|          | 88/174817 [06:30<215:28:03,  4.44s/it, loss=0.0809, v_num=6]Epoch 0:   0%|          | 88/174817 [06:30<215:34:59,  4.44s/it, loss=0.0797, v_num=6]Epoch 0:   0%|          | 89/174817 [06:34<214:57:41,  4.43s/it, loss=0.0797, v_num=6]Epoch 0:   0%|          | 89/174817 [06:34<215:04:21,  4.43s/it, loss=0.0778, v_num=6]Epoch 0:   0%|          | 90/174817 [06:38<214:45:32,  4.42s/it, loss=0.0778, v_num=6]Epoch 0:   0%|          | 90/174817 [06:38<214:52:22,  4.43s/it, loss=0.0774, v_num=6]Epoch 0:   0%|          | 91/174817 [06:41<214:16:32,  4.41s/it, loss=0.0774, v_num=6]Epoch 0:   0%|          | 91/174817 [06:41<214:23:04,  4.42s/it, loss=0.078, v_num=6] Epoch 0:   0%|          | 92/174817 [06:45<214:05:34,  4.41s/it, loss=0.078, v_num=6]Epoch 0:   0%|          | 92/174817 [06:46<214:12:13,  4.41s/it, loss=0.0783, v_num=6]Epoch 0:   0%|          | 93/174817 [06:49<213:53:18,  4.41s/it, loss=0.0783, v_num=6]Epoch 0:   0%|          | 93/174817 [06:50<213:59:42,  4.41s/it, loss=0.0887, v_num=6]Epoch 0:   0%|          | 94/174817 [06:53<213:41:15,  4.40s/it, loss=0.0887, v_num=6]Epoch 0:   0%|          | 94/174817 [06:54<213:47:50,  4.41s/it, loss=0.0845, v_num=6]Epoch 0:   0%|          | 95/174817 [06:57<213:14:12,  4.39s/it, loss=0.0845, v_num=6]Epoch 0:   0%|          | 95/174817 [06:57<213:20:27,  4.40s/it, loss=0.0829, v_num=6]Epoch 0:   0%|          | 96/174817 [07:01<213:05:08,  4.39s/it, loss=0.0829, v_num=6]Epoch 0:   0%|          | 96/174817 [07:01<213:15:18,  4.39s/it, loss=0.0869, v_num=6]Epoch 0:   0%|          | 97/174817 [07:05<212:49:28,  4.39s/it, loss=0.0869, v_num=6]Epoch 0:   0%|          | 97/174817 [07:05<212:55:37,  4.39s/it, loss=0.0935, v_num=6]Epoch 0:   0%|          | 98/174817 [07:10<213:08:51,  4.39s/it, loss=0.0935, v_num=6]Epoch 0:   0%|          | 98/174817 [07:10<213:15:06,  4.39s/it, loss=0.0917, v_num=6]Epoch 0:   0%|          | 99/174817 [07:14<213:14:48,  4.39s/it, loss=0.0917, v_num=6]Epoch 0:   0%|          | 99/174817 [07:15<213:20:51,  4.40s/it, loss=0.104, v_num=6] Epoch 0:   0%|          | 100/174817 [07:18<213:03:12,  4.39s/it, loss=0.104, v_num=6]Epoch 0:   0%|          | 100/174817 [07:19<213:09:20,  4.39s/it, loss=0.107, v_num=6]
+Validation: 0it [00:00, ?it/s][A/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+
+Validation:   0%|          | 0/5926 [00:00<?, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/5926 [00:00<?, ?it/s][AWARNING:root:ShardedDDP detected that the trainable params changed, either because of eval/train mode or parameter freezing/unfreeze.
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+WARNING:root:ShardedDDP detected that the trainable params changed, either because of eval/train mode or parameter freezing/unfreeze.
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:84: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+[rank: 1] Global seed set to 42
+[rank: 0] Global seed set to 42
+VAL outputs keys: dict_keys(['image_condition', 'video', 'reconst', 'caption', 'condition', 'samples'])
+VAL outputs keys: ['image_condition', 'video', 'reconst', 'caption', 'condition', 'samples']
+INFO:mainlogger:VAL outputs keys: ['image_condition', 'video', 'reconst', 'caption', 'condition', 'samples']
+
+Validation DataLoader 0:   0%|          | 1/5926 [00:21<35:25:19, 21.52s/it][AEpoch 0:   0%|          | 101/174817 [07:46<224:05:33,  4.62s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx1_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx1_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 2/5926 [00:45<37:11:29, 22.60s/it][AEpoch 0:   0%|          | 102/174817 [08:10<233:09:41,  4.80s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 3/5926 [01:02<34:12:40, 20.79s/it][AEpoch 0:   0%|          | 103/174817 [08:27<238:59:25,  4.92s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx3_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx3_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 4/5926 [01:22<33:53:55, 20.61s/it][AEpoch 0:   0%|          | 104/174817 [08:47<246:02:47,  5.07s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 5/5926 [01:39<32:46:03, 19.92s/it][AEpoch 0:   0%|          | 105/174817 [09:04<251:38:43,  5.19s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx5_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx5_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 6/5926 [01:59<32:46:18, 19.93s/it][AEpoch 0:   0%|          | 106/174817 [09:24<258:24:25,  5.32s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 7/5926 [02:16<32:06:20, 19.53s/it][AEpoch 0:   0%|          | 107/174817 [09:41<263:45:14,  5.43s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx7_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx7_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 8/5926 [02:36<32:12:36, 19.59s/it][AEpoch 0:   0%|          | 108/174817 [10:01<270:19:31,  5.57s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 9/5926 [02:53<31:45:53, 19.33s/it][AEpoch 0:   0%|          | 109/174817 [10:18<275:29:43,  5.68s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx9_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx9_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 10/5926 [03:13<31:50:45, 19.38s/it][AEpoch 0:   0%|          | 110/174817 [10:38<281:44:50,  5.81s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 11/5926 [03:30<31:30:29, 19.18s/it][AEpoch 0:   0%|          | 111/174817 [10:55<286:42:25,  5.91s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx11_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx11_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 12/5926 [03:50<31:36:21, 19.24s/it][AEpoch 0:   0%|          | 112/174817 [11:15<292:46:54,  6.03s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 13/5926 [04:08<31:20:02, 19.08s/it][AEpoch 0:   0%|          | 113/174817 [11:32<297:32:42,  6.13s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx13_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx13_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 14/5926 [04:27<31:25:13, 19.13s/it][AEpoch 0:   0%|          | 114/174817 [11:52<303:23:13,  6.25s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 15/5926 [04:44<31:11:31, 19.00s/it][AEpoch 0:   0%|          | 115/174817 [12:09<307:57:40,  6.35s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx15_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx15_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 16/5926 [05:04<31:17:06, 19.06s/it][AEpoch 0:   0%|          | 116/174817 [12:29<313:39:09,  6.46s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 17/5926 [05:22<31:05:36, 18.94s/it][AEpoch 0:   0%|          | 117/174817 [12:46<318:04:23,  6.55s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx17_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx17_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 18/5926 [05:41<31:07:54, 18.97s/it][AEpoch 0:   0%|          | 118/174817 [13:06<323:21:50,  6.66s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 19/5926 [05:58<30:58:06, 18.87s/it][AEpoch 0:   0%|          | 119/174817 [13:23<327:37:59,  6.75s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx19_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx19_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 20/5926 [06:18<31:00:23, 18.90s/it][AEpoch 0:   0%|          | 120/174817 [13:42<332:44:50,  6.86s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 21/5926 [06:35<30:51:46, 18.82s/it][AEpoch 0:   0%|          | 121/174817 [13:59<336:51:55,  6.94s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx21_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx21_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 22/5926 [06:54<30:53:40, 18.84s/it][AEpoch 0:   0%|          | 122/174817 [14:19<341:47:00,  7.04s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 23/5926 [07:11<30:46:05, 18.76s/it][AEpoch 0:   0%|          | 123/174817 [14:36<345:45:51,  7.13s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx23_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx23_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 24/5926 [07:31<30:49:42, 18.80s/it][AEpoch 0:   0%|          | 124/174817 [14:56<350:41:31,  7.23s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 25/5926 [07:48<30:43:03, 18.74s/it][AEpoch 0:   0%|          | 125/174817 [15:13<354:33:33,  7.31s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx25_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx25_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 26/5926 [08:08<30:46:12, 18.77s/it][AEpoch 0:   0%|          | 126/174817 [15:32<359:18:44,  7.40s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 27/5926 [08:25<30:39:54, 18.71s/it][AEpoch 0:   0%|          | 127/174817 [15:50<363:01:33,  7.48s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx27_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx27_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   0%|          | 28/5926 [08:44<30:42:56, 18.75s/it][AEpoch 0:   0%|          | 128/174817 [16:09<367:38:38,  7.58s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   0%|          | 29/5926 [09:02<30:37:32, 18.70s/it][AEpoch 0:   0%|          | 129/174817 [16:27<371:16:44,  7.65s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx29_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx29_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 30/5926 [09:21<30:39:24, 18.72s/it][AEpoch 0:   0%|          | 130/174817 [16:46<375:38:56,  7.74s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 31/5926 [09:38<30:34:01, 18.67s/it][AEpoch 0:   0%|          | 131/174817 [17:03<379:07:13,  7.81s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx31_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx31_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 32/5926 [09:57<30:34:37, 18.68s/it][AEpoch 0:   0%|          | 132/174817 [17:22<383:13:00,  7.90s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 33/5926 [10:14<30:29:48, 18.63s/it][AEpoch 0:   0%|          | 133/174817 [17:39<386:35:43,  7.97s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx33_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx33_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 34/5926 [10:33<30:30:41, 18.64s/it][AEpoch 0:   0%|          | 134/174817 [17:58<390:36:11,  8.05s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 35/5926 [10:50<30:26:04, 18.60s/it][AEpoch 0:   0%|          | 135/174817 [18:15<393:51:27,  8.12s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx35_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx35_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 36/5926 [11:10<30:28:00, 18.62s/it][AEpoch 0:   0%|          | 136/174817 [18:35<397:53:17,  8.20s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 37/5926 [11:27<30:23:41, 18.58s/it][AEpoch 0:   0%|          | 137/174817 [18:52<401:02:24,  8.27s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx37_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx37_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 38/5926 [11:46<30:25:44, 18.60s/it][AEpoch 0:   0%|          | 138/174817 [19:11<404:59:15,  8.35s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 39/5926 [12:04<30:21:47, 18.57s/it][AEpoch 0:   0%|          | 139/174817 [19:28<408:03:37,  8.41s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx39_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx39_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 40/5926 [12:23<30:23:09, 18.58s/it][AEpoch 0:   0%|          | 140/174817 [19:48<411:48:53,  8.49s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 41/5926 [12:40<30:19:31, 18.55s/it][AEpoch 0:   0%|          | 141/174817 [20:05<414:48:37,  8.55s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx41_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx41_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 42/5926 [13:00<30:21:32, 18.57s/it][AEpoch 0:   0%|          | 142/174817 [20:24<418:33:53,  8.63s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 43/5926 [13:17<30:18:02, 18.54s/it][AEpoch 0:   0%|          | 143/174817 [20:42<421:27:53,  8.69s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx43_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx43_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 44/5926 [13:36<30:19:50, 18.56s/it][AEpoch 0:   0%|          | 144/174817 [21:01<425:06:00,  8.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 45/5926 [13:53<30:16:26, 18.53s/it][AEpoch 0:   0%|          | 145/174817 [21:18<427:54:17,  8.82s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx45_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx45_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 46/5926 [14:13<30:18:02, 18.55s/it][AEpoch 0:   0%|          | 146/174817 [21:38<431:25:47,  8.89s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 47/5926 [14:30<30:14:49, 18.52s/it][AEpoch 0:   0%|          | 147/174817 [21:55<434:09:11,  8.95s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx47_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx47_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 48/5926 [14:49<30:16:02, 18.54s/it][AEpoch 0:   0%|          | 148/174817 [22:14<437:31:59,  9.02s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 49/5926 [15:06<30:12:54, 18.51s/it][AEpoch 0:   0%|          | 149/174817 [22:31<440:10:18,  9.07s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx49_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx49_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 50/5926 [15:25<30:13:40, 18.52s/it][AEpoch 0:   0%|          | 150/174817 [22:50<443:23:52,  9.14s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 51/5926 [15:43<30:10:31, 18.49s/it][AEpoch 0:   0%|          | 151/174817 [23:07<445:56:01,  9.19s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx51_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx51_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 52/5926 [16:02<30:11:12, 18.50s/it][AEpoch 0:   0%|          | 152/174817 [23:26<449:04:05,  9.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 53/5926 [16:19<30:08:24, 18.48s/it][AEpoch 0:   0%|          | 153/174817 [23:44<451:34:08,  9.31s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx53_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx53_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 54/5926 [16:38<30:10:16, 18.50s/it][AEpoch 0:   0%|          | 154/174817 [24:03<454:50:00,  9.37s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 55/5926 [16:55<30:07:23, 18.47s/it][AEpoch 0:   0%|          | 155/174817 [24:20<457:14:04,  9.42s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx55_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx55_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 56/5926 [17:15<30:08:50, 18.49s/it][AEpoch 0:   0%|          | 156/174817 [24:40<460:21:31,  9.49s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 57/5926 [17:32<30:06:09, 18.46s/it][AEpoch 0:   0%|          | 157/174817 [24:57<462:42:34,  9.54s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx57_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx57_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 58/5926 [17:51<30:07:04, 18.48s/it][AEpoch 0:   0%|          | 158/174817 [25:16<465:40:15,  9.60s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 59/5926 [18:08<30:04:34, 18.45s/it][AEpoch 0:   0%|          | 159/174817 [25:33<467:58:21,  9.65s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx59_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx59_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 60/5926 [18:28<30:06:12, 18.47s/it][AEpoch 0:   0%|          | 160/174817 [25:53<471:00:07,  9.71s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 61/5926 [18:45<30:04:00, 18.46s/it][AEpoch 0:   0%|          | 161/174817 [26:10<473:17:12,  9.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx61_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx61_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 62/5926 [19:05<30:05:33, 18.47s/it][AEpoch 0:   0%|          | 162/174817 [26:30<476:14:27,  9.82s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 63/5926 [19:22<30:03:09, 18.45s/it][AEpoch 0:   0%|          | 163/174817 [26:47<478:24:45,  9.86s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx63_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx63_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 64/5926 [19:42<30:04:56, 18.47s/it][AEpoch 0:   0%|          | 164/174817 [27:07<481:21:25,  9.92s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 65/5926 [19:59<30:02:37, 18.45s/it][AEpoch 0:   0%|          | 165/174817 [27:24<483:28:38,  9.97s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx65_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx65_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 66/5926 [20:19<30:04:01, 18.47s/it][AEpoch 0:   0%|          | 166/174817 [27:43<486:17:31, 10.02s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 67/5926 [20:36<30:01:49, 18.45s/it][AEpoch 0:   0%|          | 167/174817 [28:01<488:22:03, 10.07s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx67_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx67_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 68/5926 [20:55<30:03:19, 18.47s/it][AEpoch 0:   0%|          | 168/174817 [28:20<491:08:50, 10.12s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 69/5926 [21:13<30:01:04, 18.45s/it][AEpoch 0:   0%|          | 169/174817 [28:37<493:08:52, 10.17s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx69_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx69_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 70/5926 [21:32<30:02:28, 18.47s/it][AEpoch 0:   0%|          | 170/174817 [28:57<495:51:29, 10.22s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 71/5926 [21:49<30:00:19, 18.45s/it][AEpoch 0:   0%|          | 171/174817 [29:14<497:48:55, 10.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx71_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx71_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 72/5926 [22:09<30:01:36, 18.47s/it][AEpoch 0:   0%|          | 172/174817 [29:34<500:27:08, 10.32s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|          | 73/5926 [22:26<29:59:26, 18.45s/it][AEpoch 0:   0%|          | 173/174817 [29:51<502:20:42, 10.36s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx73_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx73_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|          | 74/5926 [22:46<30:00:40, 18.46s/it][AEpoch 0:   0%|          | 174/174817 [30:11<504:55:28, 10.41s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 75/5926 [23:03<29:58:36, 18.44s/it][AEpoch 0:   0%|          | 175/174817 [30:28<506:46:41, 10.45s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx75_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx75_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 76/5926 [23:23<30:00:10, 18.46s/it][AEpoch 0:   0%|          | 176/174817 [30:48<509:23:03, 10.50s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 77/5926 [23:40<29:58:12, 18.45s/it][AEpoch 0:   0%|          | 177/174817 [31:05<511:12:07, 10.54s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx77_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx77_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 78/5926 [23:59<29:59:19, 18.46s/it][AEpoch 0:   0%|          | 178/174817 [31:24<513:39:52, 10.59s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 79/5926 [24:17<29:57:19, 18.44s/it][AEpoch 0:   0%|          | 179/174817 [31:41<515:25:31, 10.63s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx79_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx79_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 80/5926 [24:36<29:58:17, 18.46s/it][AEpoch 0:   0%|          | 180/174817 [32:01<517:48:35, 10.67s/it, loss=0.107, v_num=6][rank: 1] Global seed set to 42
+[rank: 0] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 81/5926 [24:53<29:56:29, 18.44s/it][AEpoch 0:   0%|          | 181/174817 [32:18<519:33:46, 10.71s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx81_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx81_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 82/5926 [25:13<29:57:21, 18.45s/it][AEpoch 0:   0%|          | 182/174817 [32:38<521:53:02, 10.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 83/5926 [25:30<29:55:28, 18.44s/it][AEpoch 0:   0%|          | 183/174817 [32:55<523:33:45, 10.79s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx83_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx83_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 84/5926 [25:49<29:56:32, 18.45s/it][AEpoch 0:   0%|          | 184/174817 [33:14<525:53:13, 10.84s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 85/5926 [26:07<29:54:43, 18.44s/it][AEpoch 0:   0%|          | 185/174817 [33:31<527:32:04, 10.88s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx85_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx85_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 86/5926 [26:26<29:55:50, 18.45s/it][AEpoch 0:   0%|          | 186/174817 [33:51<529:49:53, 10.92s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   1%|▏         | 87/5926 [26:43<29:54:08, 18.44s/it][AEpoch 0:   0%|          | 187/174817 [34:08<531:27:31, 10.96s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx87_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx87_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   1%|▏         | 88/5926 [27:03<29:55:12, 18.45s/it][AEpoch 0:   0%|          | 188/174817 [34:28<533:42:28, 11.00s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 89/5926 [27:20<29:53:27, 18.44s/it][AEpoch 0:   0%|          | 189/174817 [34:45<535:16:29, 11.03s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx89_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx89_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 90/5926 [27:40<29:54:44, 18.45s/it][AEpoch 0:   0%|          | 190/174817 [35:05<537:32:10, 11.08s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 91/5926 [27:57<29:53:00, 18.44s/it][AEpoch 0:   0%|          | 191/174817 [35:22<539:04:05, 11.11s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx91_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx91_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 92/5926 [28:17<29:53:55, 18.45s/it][AEpoch 0:   0%|          | 192/174817 [35:42<541:12:29, 11.16s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 93/5926 [28:34<29:52:14, 18.44s/it][AEpoch 0:   0%|          | 193/174817 [35:59<542:42:28, 11.19s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx93_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx93_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 94/5926 [28:53<29:52:50, 18.44s/it][AEpoch 0:   0%|          | 194/174817 [36:18<544:44:11, 11.23s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 95/5926 [29:10<29:51:12, 18.43s/it][AEpoch 0:   0%|          | 195/174817 [36:35<546:12:13, 11.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx95_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx95_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 96/5926 [29:30<29:52:00, 18.44s/it][AEpoch 0:   0%|          | 196/174817 [36:55<548:14:52, 11.30s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 97/5926 [29:47<29:50:25, 18.43s/it][AEpoch 0:   0%|          | 197/174817 [37:12<549:41:21, 11.33s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx97_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx97_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 98/5926 [30:07<29:51:16, 18.44s/it][AEpoch 0:   0%|          | 198/174817 [37:32<551:42:29, 11.37s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 99/5926 [30:24<29:49:39, 18.43s/it][AEpoch 0:   0%|          | 199/174817 [37:49<553:06:04, 11.40s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx99_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx99_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 100/5926 [30:43<29:50:28, 18.44s/it][AEpoch 0:   0%|          | 200/174817 [38:08<555:04:58, 11.44s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 101/5926 [31:01<29:48:53, 18.43s/it][AEpoch 0:   0%|          | 201/174817 [38:25<556:26:54, 11.47s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx101_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx101_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 102/5926 [31:20<29:49:47, 18.44s/it][AEpoch 0:   0%|          | 202/174817 [38:45<558:25:08, 11.51s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 103/5926 [31:37<29:48:17, 18.43s/it][AEpoch 0:   0%|          | 203/174817 [39:02<559:46:13, 11.54s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx103_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx103_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 104/5926 [31:57<29:49:08, 18.44s/it][AEpoch 0:   0%|          | 204/174817 [39:22<561:41:56, 11.58s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 105/5926 [32:14<29:47:38, 18.43s/it][AEpoch 0:   0%|          | 205/174817 [39:39<563:00:45, 11.61s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx105_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx105_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 106/5926 [32:34<29:48:40, 18.44s/it][AEpoch 0:   0%|          | 206/174817 [39:59<564:57:33, 11.65s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 107/5926 [32:51<29:47:14, 18.43s/it][AEpoch 0:   0%|          | 207/174817 [40:16<566:15:19, 11.67s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx107_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx107_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 108/5926 [33:11<29:47:46, 18.44s/it][AEpoch 0:   0%|          | 208/174817 [40:36<568:02:51, 11.71s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 109/5926 [33:28<29:46:11, 18.42s/it][AEpoch 0:   0%|          | 209/174817 [40:53<569:16:22, 11.74s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx109_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx109_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 110/5926 [33:47<29:46:36, 18.43s/it][AEpoch 0:   0%|          | 210/174817 [41:12<571:00:11, 11.77s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 111/5926 [34:04<29:45:05, 18.42s/it][AEpoch 0:   0%|          | 211/174817 [41:29<572:12:34, 11.80s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx111_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx111_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 112/5926 [34:23<29:45:40, 18.43s/it][AEpoch 0:   0%|          | 212/174817 [41:48<573:57:30, 11.83s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 113/5926 [34:41<29:44:14, 18.42s/it][AEpoch 0:   0%|          | 213/174817 [42:05<575:09:22, 11.86s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx113_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx113_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 114/5926 [35:00<29:44:48, 18.43s/it][AEpoch 0:   0%|          | 214/174817 [42:25<576:52:18, 11.89s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 115/5926 [35:17<29:43:24, 18.41s/it][AEpoch 0:   0%|          | 215/174817 [42:42<578:02:55, 11.92s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx115_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx115_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 116/5926 [35:37<29:44:02, 18.42s/it][AEpoch 0:   0%|          | 216/174817 [43:02<579:45:30, 11.95s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 117/5926 [35:54<29:42:35, 18.41s/it][AEpoch 0:   0%|          | 217/174817 [43:19<580:53:36, 11.98s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx117_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx117_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 118/5926 [36:13<29:43:22, 18.42s/it][AEpoch 0:   0%|          | 218/174817 [43:38<582:36:49, 12.01s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 119/5926 [36:31<29:41:58, 18.41s/it][AEpoch 0:   0%|          | 219/174817 [43:55<583:44:08, 12.04s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx119_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx119_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 120/5926 [36:50<29:42:46, 18.42s/it][AEpoch 0:   0%|          | 220/174817 [44:15<585:26:18, 12.07s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 121/5926 [37:07<29:41:24, 18.41s/it][AEpoch 0:   0%|          | 221/174817 [44:32<586:32:20, 12.09s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx121_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx121_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 122/5926 [37:27<29:41:58, 18.42s/it][AEpoch 0:   0%|          | 222/174817 [44:52<588:09:25, 12.13s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 123/5926 [37:44<29:40:40, 18.41s/it][AEpoch 0:   0%|          | 223/174817 [45:09<589:14:55, 12.15s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx123_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx123_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 124/5926 [38:04<29:41:12, 18.42s/it][AEpoch 0:   0%|          | 224/174817 [45:28<590:49:59, 12.18s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 125/5926 [38:21<29:39:55, 18.41s/it][AEpoch 0:   0%|          | 225/174817 [45:46<591:54:00, 12.20s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx125_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx125_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 126/5926 [38:40<29:40:25, 18.42s/it][AEpoch 0:   0%|          | 226/174817 [46:05<593:27:22, 12.24s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 127/5926 [38:57<29:39:10, 18.41s/it][AEpoch 0:   0%|          | 227/174817 [46:22<594:30:33, 12.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx127_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx127_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 128/5926 [39:17<29:39:47, 18.42s/it][AEpoch 0:   0%|          | 228/174817 [46:42<596:04:22, 12.29s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 129/5926 [39:34<29:38:32, 18.41s/it][AEpoch 0:   0%|          | 229/174817 [46:59<597:06:05, 12.31s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx129_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx129_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 130/5926 [39:54<29:39:24, 18.42s/it][AEpoch 0:   0%|          | 230/174817 [47:19<598:42:56, 12.35s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 131/5926 [40:11<29:38:09, 18.41s/it][AEpoch 0:   0%|          | 231/174817 [47:36<599:43:07, 12.37s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx131_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx131_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 132/5926 [40:31<29:38:59, 18.42s/it][AEpoch 0:   0%|          | 232/174817 [47:56<601:18:23, 12.40s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 133/5926 [40:48<29:37:46, 18.41s/it][AEpoch 0:   0%|          | 233/174817 [48:13<602:17:48, 12.42s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx133_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx133_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 134/5926 [41:08<29:38:30, 18.42s/it][AEpoch 0:   0%|          | 234/174817 [48:33<603:49:56, 12.45s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 135/5926 [41:25<29:37:19, 18.41s/it][AEpoch 0:   0%|          | 235/174817 [48:50<604:48:23, 12.47s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx135_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx135_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 136/5926 [41:45<29:38:01, 18.43s/it][AEpoch 0:   0%|          | 236/174817 [49:10<606:19:05, 12.50s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 137/5926 [42:02<29:36:49, 18.42s/it][AEpoch 0:   0%|          | 237/174817 [49:27<607:15:55, 12.52s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx137_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx137_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 138/5926 [42:22<29:37:31, 18.43s/it][AEpoch 0:   0%|          | 238/174817 [49:47<608:45:28, 12.55s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 139/5926 [42:39<29:36:19, 18.42s/it][AEpoch 0:   0%|          | 239/174817 [50:04<609:40:58, 12.57s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx139_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx139_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 140/5926 [42:59<29:36:52, 18.43s/it][AEpoch 0:   0%|          | 240/174817 [50:24<611:06:51, 12.60s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 141/5926 [43:16<29:35:40, 18.42s/it][AEpoch 0:   0%|          | 241/174817 [50:41<612:01:08, 12.62s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx141_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx141_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 142/5926 [43:36<29:36:16, 18.43s/it][AEpoch 0:   0%|          | 242/174817 [51:01<613:26:51, 12.65s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 143/5926 [43:53<29:35:07, 18.42s/it][AEpoch 0:   0%|          | 243/174817 [51:18<614:20:40, 12.67s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx143_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx143_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 144/5926 [44:13<29:35:41, 18.43s/it][AEpoch 0:   0%|          | 244/174817 [51:38<615:44:28, 12.70s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 145/5926 [44:30<29:34:31, 18.42s/it][AEpoch 0:   0%|          | 245/174817 [51:55<616:37:06, 12.72s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx145_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx145_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 146/5926 [44:50<29:35:14, 18.43s/it][AEpoch 0:   0%|          | 246/174817 [52:15<618:02:30, 12.75s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   2%|▏         | 147/5926 [45:07<29:34:02, 18.42s/it][AEpoch 0:   0%|          | 247/174817 [52:32<618:53:14, 12.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx147_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx147_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   2%|▏         | 148/5926 [45:27<29:34:31, 18.43s/it][AEpoch 0:   0%|          | 248/174817 [52:52<620:13:41, 12.79s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 149/5926 [45:44<29:33:22, 18.42s/it][AEpoch 0:   0%|          | 249/174817 [53:09<621:04:03, 12.81s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx149_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx149_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 150/5926 [46:03<29:33:51, 18.43s/it][AEpoch 0:   0%|          | 250/174817 [53:28<622:23:28, 12.84s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 151/5926 [46:21<29:32:39, 18.42s/it][AEpoch 0:   0%|          | 251/174817 [53:45<623:11:59, 12.85s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx151_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx151_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 152/5926 [46:40<29:33:02, 18.42s/it][AEpoch 0:   0%|          | 252/174817 [54:05<624:28:37, 12.88s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 153/5926 [46:57<29:31:55, 18.42s/it][AEpoch 0:   0%|          | 253/174817 [54:22<625:17:07, 12.90s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx153_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx153_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 154/5926 [47:17<29:32:20, 18.42s/it][AEpoch 0:   0%|          | 254/174817 [54:42<626:33:26, 12.92s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 155/5926 [47:34<29:31:14, 18.42s/it][AEpoch 0:   0%|          | 255/174817 [54:59<627:21:30, 12.94s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx155_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx155_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 156/5926 [47:53<29:31:40, 18.42s/it][AEpoch 0:   0%|          | 256/174817 [55:18<628:37:06, 12.96s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 157/5926 [48:11<29:30:33, 18.41s/it][AEpoch 0:   0%|          | 257/174817 [55:35<629:23:41, 12.98s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx157_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx157_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 158/5926 [48:30<29:30:59, 18.42s/it][AEpoch 0:   0%|          | 258/174817 [55:55<630:38:37, 13.01s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 159/5926 [48:47<29:29:54, 18.41s/it][AEpoch 0:   0%|          | 259/174817 [56:12<631:24:45, 13.02s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx159_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx159_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 160/5926 [49:07<29:30:29, 18.42s/it][AEpoch 0:   0%|          | 260/174817 [56:32<632:41:31, 13.05s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 161/5926 [49:24<29:29:24, 18.42s/it][AEpoch 0:   0%|          | 261/174817 [56:49<633:26:46, 13.06s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx161_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx161_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 162/5926 [49:44<29:30:05, 18.43s/it][AEpoch 0:   0%|          | 262/174817 [57:09<634:44:27, 13.09s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 163/5926 [50:02<29:29:02, 18.42s/it][AEpoch 0:   0%|          | 263/174817 [57:26<635:29:19, 13.11s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx163_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx163_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 164/5926 [50:21<29:29:24, 18.42s/it][AEpoch 0:   0%|          | 264/174817 [57:46<636:40:08, 13.13s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 165/5926 [50:38<29:28:21, 18.42s/it][AEpoch 0:   0%|          | 265/174817 [58:03<637:24:00, 13.15s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx165_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx165_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 166/5926 [50:58<29:28:42, 18.42s/it][AEpoch 0:   0%|          | 266/174817 [58:23<638:33:56, 13.17s/it, loss=0.107, v_num=6][rank: 1] Global seed set to 42
+[rank: 0] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 167/5926 [51:15<29:27:39, 18.42s/it][AEpoch 0:   0%|          | 267/174817 [58:40<639:16:55, 13.18s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx167_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx167_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 168/5926 [51:35<29:28:00, 18.42s/it][AEpoch 0:   0%|          | 268/174817 [58:59<640:25:55, 13.21s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 169/5926 [51:52<29:26:58, 18.42s/it][AEpoch 0:   0%|          | 269/174817 [59:17<641:08:17, 13.22s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx169_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx169_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 170/5926 [52:11<29:27:23, 18.42s/it][AEpoch 0:   0%|          | 270/174817 [59:36<642:17:44, 13.25s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 171/5926 [52:29<29:26:21, 18.42s/it][AEpoch 0:   0%|          | 271/174817 [59:53<642:59:25, 13.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx171_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx171_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 172/5926 [52:49<29:26:56, 18.42s/it][AEpoch 0:   0%|          | 272/174817 [1:00:13<644:11:27, 13.29s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 173/5926 [53:06<29:25:56, 18.42s/it][AEpoch 0:   0%|          | 273/174817 [1:00:31<644:52:29, 13.30s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx173_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx173_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 174/5926 [53:26<29:26:27, 18.43s/it][AEpoch 0:   0%|          | 274/174817 [1:00:51<646:02:34, 13.32s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 175/5926 [53:43<29:25:27, 18.42s/it][AEpoch 0:   0%|          | 275/174817 [1:01:08<646:42:52, 13.34s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx175_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx175_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 176/5926 [54:03<29:26:06, 18.43s/it][AEpoch 0:   0%|          | 276/174817 [1:01:28<647:54:49, 13.36s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 177/5926 [54:20<29:25:07, 18.42s/it][AEpoch 0:   0%|          | 277/174817 [1:01:45<648:34:28, 13.38s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx177_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx177_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 178/5926 [54:40<29:25:24, 18.43s/it][AEpoch 0:   0%|          | 278/174817 [1:02:05<649:38:30, 13.40s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 179/5926 [54:57<29:24:26, 18.42s/it][AEpoch 0:   0%|          | 279/174817 [1:02:22<650:17:55, 13.41s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx179_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx179_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 180/5926 [55:17<29:25:02, 18.43s/it][AEpoch 0:   0%|          | 280/174817 [1:02:42<651:27:25, 13.44s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 181/5926 [55:34<29:24:02, 18.42s/it][AEpoch 0:   0%|          | 281/174817 [1:02:59<652:05:18, 13.45s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx181_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx181_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 182/5926 [55:54<29:24:41, 18.43s/it][AEpoch 0:   0%|          | 282/174817 [1:03:19<653:15:15, 13.47s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 183/5926 [56:12<29:23:43, 18.43s/it][AEpoch 0:   0%|          | 283/174817 [1:03:36<653:52:57, 13.49s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx183_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx183_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 184/5926 [56:32<29:24:14, 18.44s/it][AEpoch 0:   0%|          | 284/174817 [1:03:56<654:59:32, 13.51s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 185/5926 [56:49<29:23:16, 18.43s/it][AEpoch 0:   0%|          | 285/174817 [1:04:14<655:36:32, 13.52s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx185_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx185_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 186/5926 [57:09<29:23:47, 18.44s/it][AEpoch 0:   0%|          | 286/174817 [1:04:34<656:42:37, 13.55s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 187/5926 [57:26<29:22:48, 18.43s/it][AEpoch 0:   0%|          | 287/174817 [1:04:51<657:18:41, 13.56s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx187_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx187_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 188/5926 [57:46<29:23:23, 18.44s/it][AEpoch 0:   0%|          | 288/174817 [1:05:11<658:25:11, 13.58s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 189/5926 [58:03<29:22:26, 18.43s/it][AEpoch 0:   0%|          | 289/174817 [1:05:28<659:01:02, 13.59s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx189_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx189_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 190/5926 [58:23<29:22:54, 18.44s/it][AEpoch 0:   0%|          | 290/174817 [1:05:48<660:04:42, 13.62s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 191/5926 [58:40<29:21:57, 18.43s/it][AEpoch 0:   0%|          | 291/174817 [1:06:05<660:39:52, 13.63s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx191_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx191_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 192/5926 [59:00<29:22:25, 18.44s/it][AEpoch 0:   0%|          | 292/174817 [1:06:25<661:42:59, 13.65s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 193/5926 [59:18<29:21:29, 18.44s/it][AEpoch 0:   0%|          | 293/174817 [1:06:42<662:18:05, 13.66s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx193_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx193_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 194/5926 [59:37<29:21:54, 18.44s/it][AEpoch 0:   0%|          | 294/174817 [1:07:02<663:19:28, 13.68s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 195/5926 [59:55<29:20:57, 18.44s/it][AEpoch 0:   0%|          | 295/174817 [1:07:19<663:53:23, 13.69s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx195_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx195_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 196/5926 [1:00:14<29:21:10, 18.44s/it][AEpoch 0:   0%|          | 296/174817 [1:07:39<664:50:17, 13.71s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 197/5926 [1:00:31<29:20:14, 18.44s/it][AEpoch 0:   0%|          | 297/174817 [1:07:56<665:23:35, 13.73s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx197_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx197_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 198/5926 [1:00:51<29:20:41, 18.44s/it][AEpoch 0:   0%|          | 298/174817 [1:08:16<666:24:36, 13.75s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 199/5926 [1:01:08<29:19:45, 18.44s/it][AEpoch 0:   0%|          | 299/174817 [1:08:33<666:57:27, 13.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx199_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx199_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 200/5926 [1:01:28<29:20:15, 18.44s/it][AEpoch 0:   0%|          | 300/174817 [1:08:53<667:59:04, 13.78s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 201/5926 [1:01:46<29:19:21, 18.44s/it][AEpoch 0:   0%|          | 301/174817 [1:09:10<668:31:34, 13.79s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx201_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx201_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 202/5926 [1:02:06<29:19:43, 18.45s/it][AEpoch 0:   0%|          | 302/174817 [1:09:30<669:29:57, 13.81s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 203/5926 [1:02:23<29:18:49, 18.44s/it][AEpoch 0:   0%|          | 303/174817 [1:09:48<670:02:03, 13.82s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx203_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx203_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 204/5926 [1:02:42<29:19:06, 18.45s/it][AEpoch 0:   0%|          | 304/174817 [1:10:07<670:58:10, 13.84s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 205/5926 [1:03:00<29:18:11, 18.44s/it][AEpoch 0:   0%|          | 305/174817 [1:10:24<671:29:19, 13.85s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx205_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx205_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   3%|▎         | 206/5926 [1:03:20<29:18:36, 18.45s/it][AEpoch 0:   0%|          | 306/174817 [1:10:44<672:27:32, 13.87s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   3%|▎         | 207/5926 [1:03:37<29:17:42, 18.44s/it][AEpoch 0:   0%|          | 307/174817 [1:11:02<672:58:26, 13.88s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx207_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx207_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 208/5926 [1:03:57<29:18:01, 18.45s/it][AEpoch 0:   0%|          | 308/174817 [1:11:21<673:54:13, 13.90s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 209/5926 [1:04:14<29:17:07, 18.44s/it][AEpoch 0:   0%|          | 309/174817 [1:11:39<674:24:40, 13.91s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx209_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx209_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 210/5926 [1:04:34<29:17:29, 18.45s/it][AEpoch 0:   0%|          | 310/174817 [1:11:58<675:20:47, 13.93s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 211/5926 [1:04:51<29:16:35, 18.44s/it][AEpoch 0:   0%|          | 311/174817 [1:12:16<675:50:31, 13.94s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx211_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx211_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 212/5926 [1:05:11<29:17:05, 18.45s/it][AEpoch 0:   0%|          | 312/174817 [1:12:36<676:48:51, 13.96s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 213/5926 [1:05:28<29:16:12, 18.44s/it][AEpoch 0:   0%|          | 313/174817 [1:12:53<677:18:26, 13.97s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx213_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx213_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 214/5926 [1:05:48<29:16:40, 18.45s/it][AEpoch 0:   0%|          | 314/174817 [1:13:13<678:15:43, 13.99s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 215/5926 [1:06:05<29:15:47, 18.45s/it][AEpoch 0:   0%|          | 315/174817 [1:13:30<678:44:33, 14.00s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx215_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx215_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 216/5926 [1:06:25<29:16:02, 18.45s/it][AEpoch 0:   0%|          | 316/174817 [1:13:50<679:37:02, 14.02s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 217/5926 [1:06:42<29:15:08, 18.45s/it][AEpoch 0:   0%|          | 317/174817 [1:14:07<680:05:06, 14.03s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx217_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx217_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 218/5926 [1:07:02<29:15:25, 18.45s/it][AEpoch 0:   0%|          | 318/174817 [1:14:27<680:57:27, 14.05s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 219/5926 [1:07:19<29:14:33, 18.45s/it][AEpoch 0:   0%|          | 319/174817 [1:14:44<681:25:43, 14.06s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx219_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx219_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 220/5926 [1:07:39<29:14:49, 18.45s/it][AEpoch 0:   0%|          | 320/174817 [1:15:04<682:17:34, 14.08s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▎         | 221/5926 [1:07:56<29:13:58, 18.45s/it][AEpoch 0:   0%|          | 321/174817 [1:15:21<682:45:29, 14.09s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx221_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx221_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▎         | 222/5926 [1:08:16<29:14:08, 18.45s/it][AEpoch 0:   0%|          | 322/174817 [1:15:41<683:34:24, 14.10s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 223/5926 [1:08:33<29:13:15, 18.45s/it][AEpoch 0:   0%|          | 323/174817 [1:15:58<684:01:15, 14.11s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx223_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx223_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 224/5926 [1:08:53<29:13:34, 18.45s/it][AEpoch 0:   0%|          | 324/174817 [1:16:18<684:53:12, 14.13s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 225/5926 [1:09:10<29:12:42, 18.45s/it][AEpoch 0:   0%|          | 325/174817 [1:16:35<685:19:57, 14.14s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx225_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx225_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 226/5926 [1:09:30<29:13:04, 18.45s/it][AEpoch 0:   0%|          | 326/174817 [1:16:55<686:12:14, 14.16s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 227/5926 [1:09:47<29:12:13, 18.45s/it][AEpoch 0:   0%|          | 327/174817 [1:17:12<686:38:53, 14.17s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx227_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx227_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 228/5926 [1:10:07<29:12:34, 18.45s/it][AEpoch 0:   0%|          | 328/174817 [1:17:32<687:30:32, 14.18s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 229/5926 [1:10:24<29:11:45, 18.45s/it][AEpoch 0:   0%|          | 329/174817 [1:17:49<687:57:07, 14.19s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx229_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx229_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 230/5926 [1:10:44<29:12:06, 18.46s/it][AEpoch 0:   0%|          | 330/174817 [1:18:09<688:48:20, 14.21s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 231/5926 [1:11:02<29:11:16, 18.45s/it][AEpoch 0:   0%|          | 331/174817 [1:18:26<689:14:13, 14.22s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx231_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx231_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 232/5926 [1:11:21<29:11:28, 18.46s/it][AEpoch 0:   0%|          | 332/174817 [1:18:46<690:01:50, 14.24s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 233/5926 [1:11:38<29:10:38, 18.45s/it][AEpoch 0:   0%|          | 333/174817 [1:19:03<690:27:17, 14.25s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx233_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx233_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 234/5926 [1:11:58<29:10:50, 18.46s/it][AEpoch 0:   0%|          | 334/174817 [1:19:23<691:14:37, 14.26s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 235/5926 [1:12:15<29:10:01, 18.45s/it][AEpoch 0:   0%|          | 335/174817 [1:19:40<691:39:49, 14.27s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx235_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx235_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 236/5926 [1:12:35<29:10:09, 18.46s/it][AEpoch 0:   0%|          | 336/174817 [1:20:00<692:25:13, 14.29s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 237/5926 [1:12:52<29:09:21, 18.45s/it][AEpoch 0:   0%|          | 337/174817 [1:20:17<692:50:13, 14.30s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx237_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx237_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 238/5926 [1:13:12<29:09:38, 18.46s/it][AEpoch 0:   0%|          | 338/174817 [1:20:37<693:38:28, 14.31s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 239/5926 [1:13:29<29:08:49, 18.45s/it][AEpoch 0:   0%|          | 339/174817 [1:20:54<694:02:55, 14.32s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx239_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx239_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 240/5926 [1:13:49<29:09:09, 18.46s/it][AEpoch 0:   0%|          | 340/174817 [1:21:14<694:51:56, 14.34s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 241/5926 [1:14:07<29:08:21, 18.45s/it][AEpoch 0:   0%|          | 341/174817 [1:21:31<695:16:01, 14.35s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx241_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx241_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 242/5926 [1:14:26<29:08:35, 18.46s/it][AEpoch 0:   0%|          | 342/174817 [1:21:51<696:02:36, 14.36s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 243/5926 [1:14:44<29:07:49, 18.45s/it][AEpoch 0:   0%|          | 343/174817 [1:22:08<696:26:53, 14.37s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx243_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx243_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 244/5926 [1:15:04<29:08:26, 18.46s/it][AEpoch 0:   0%|          | 344/174817 [1:22:29<697:21:20, 14.39s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 245/5926 [1:15:22<29:07:38, 18.46s/it][AEpoch 0:   0%|          | 345/174817 [1:22:46<697:44:37, 14.40s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx245_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx245_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 246/5926 [1:15:44<29:08:47, 18.47s/it][AEpoch 0:   0%|          | 346/174817 [1:23:09<698:50:15, 14.42s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 247/5926 [1:16:01<29:07:59, 18.47s/it][AEpoch 0:   0%|          | 347/174817 [1:23:26<699:13:17, 14.43s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx247_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx247_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 248/5926 [1:16:23<29:09:04, 18.48s/it][AEpoch 0:   0%|          | 348/174817 [1:23:48<700:17:23, 14.45s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 249/5926 [1:16:40<29:08:16, 18.48s/it][AEpoch 0:   0%|          | 349/174817 [1:24:05<700:39:50, 14.46s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx249_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx249_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 250/5926 [1:17:03<29:09:28, 18.49s/it][AEpoch 0:   0%|          | 350/174817 [1:24:28<701:46:07, 14.48s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 251/5926 [1:17:21<29:08:54, 18.49s/it][AEpoch 0:   0%|          | 351/174817 [1:24:45<702:13:29, 14.49s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx251_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx251_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 252/5926 [1:17:43<29:09:58, 18.51s/it][AEpoch 0:   0%|          | 352/174817 [1:25:08<703:16:27, 14.51s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 253/5926 [1:18:01<29:09:35, 18.50s/it][AEpoch 0:   0%|          | 353/174817 [1:25:26<703:47:42, 14.52s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx253_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx253_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 254/5926 [1:18:24<29:10:55, 18.52s/it][AEpoch 0:   0%|          | 354/174817 [1:25:49<704:56:24, 14.55s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 255/5926 [1:18:42<29:10:20, 18.52s/it][AEpoch 0:   0%|          | 355/174817 [1:26:07<705:22:33, 14.56s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx255_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx255_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 256/5926 [1:19:05<29:11:48, 18.54s/it][AEpoch 0:   0%|          | 356/174817 [1:26:30<706:33:57, 14.58s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 257/5926 [1:19:23<29:11:20, 18.54s/it][AEpoch 0:   0%|          | 357/174817 [1:26:48<707:02:26, 14.59s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx257_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx257_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 258/5926 [1:19:47<29:12:59, 18.56s/it][AEpoch 0:   0%|          | 358/174817 [1:27:12<708:17:52, 14.62s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 259/5926 [1:20:07<29:13:11, 18.56s/it][AEpoch 0:   0%|          | 359/174817 [1:27:32<709:00:32, 14.63s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx259_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx259_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 260/5926 [1:20:31<29:14:44, 18.58s/it][AEpoch 0:   0%|          | 360/174817 [1:27:56<710:13:33, 14.66s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 261/5926 [1:20:52<29:15:30, 18.59s/it][AEpoch 0:   0%|          | 361/174817 [1:28:17<711:08:53, 14.67s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx261_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx261_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 262/5926 [1:21:18<29:17:54, 18.62s/it][AEpoch 0:   0%|          | 362/174817 [1:28:43<712:40:30, 14.71s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 263/5926 [1:21:41<29:18:53, 18.64s/it][AEpoch 0:   0%|          | 363/174817 [1:29:06<713:40:42, 14.73s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx263_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx263_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 264/5926 [1:22:08<29:21:36, 18.67s/it][AEpoch 0:   0%|          | 364/174817 [1:29:33<715:19:02, 14.76s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   4%|▍         | 265/5926 [1:22:32<29:23:08, 18.69s/it][AEpoch 0:   0%|          | 365/174817 [1:29:56<716:31:09, 14.79s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx265_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx265_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   4%|▍         | 266/5926 [1:22:59<29:25:52, 18.72s/it][AEpoch 0:   0%|          | 366/174817 [1:30:24<718:10:09, 14.82s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   5%|▍         | 267/5926 [1:23:22<29:27:13, 18.74s/it][AEpoch 0:   0%|          | 367/174817 [1:30:47<719:18:11, 14.84s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx267_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx267_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   5%|▍         | 268/5926 [1:23:51<29:30:32, 18.78s/it][AEpoch 0:   0%|          | 368/174817 [1:31:16<721:10:03, 14.88s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   5%|▍         | 269/5926 [1:24:16<29:32:26, 18.80s/it][AEpoch 0:   0%|          | 369/174817 [1:31:41<722:30:23, 14.91s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx269_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx269_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   5%|▍         | 270/5926 [1:24:47<29:36:09, 18.84s/it][AEpoch 0:   0%|          | 370/174817 [1:32:12<724:31:20, 14.95s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   5%|▍         | 271/5926 [1:25:12<29:37:59, 18.86s/it][AEpoch 0:   0%|          | 371/174817 [1:32:37<725:49:56, 14.98s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx271_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx271_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   5%|▍         | 272/5926 [1:25:43<29:42:05, 18.91s/it][AEpoch 0:   0%|          | 372/174817 [1:33:08<727:59:42, 15.02s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+
+Validation DataLoader 0:   5%|▍         | 273/5926 [1:26:11<29:44:48, 18.94s/it][AEpoch 0:   0%|          | 373/174817 [1:33:36<729:38:09, 15.06s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Log [val] batch <ep0_idx273_rank0> to tensorboard ...
+INFO:mainlogger:Log [val] batch <ep0_idx273_rank0> to tensorboard ...
+Finish!
+INFO:mainlogger:Finish!
+
+Validation DataLoader 0:   5%|▍         | 274/5926 [1:26:45<29:49:41, 19.00s/it][AEpoch 0:   0%|          | 374/174817 [1:34:10<732:05:53, 15.11s/it, loss=0.107, v_num=6][rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+Traceback (most recent call last):
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py", line 189, in <module>
+    trainer.fit(model, data)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 608, in fit
+    call._call_and_handle_interrupt(
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/call.py", line 38, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 650, in _fit_impl
+    self._run(model, ckpt_path=self.ckpt_path)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1112, in _run
+    results = self._run_stage()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1191, in _run_stage
+    self._run_train()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1214, in _run_train
+    self.fit_loop.run()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/loop.py", line 199, in run
+    self.advance(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 267, in advance
+    self._outputs = self.epoch_loop.run(self._data_fetcher)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/loop.py", line 200, in run
+    self.on_advance_end()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 250, in on_advance_end
+    self._run_validation()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 308, in _run_validation
+    self.val_loop.run()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/loop.py", line 199, in run
+    self.advance(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 152, in advance
+    dl_outputs = self.epoch_loop.run(self._data_fetcher, dl_max_batches, kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/loop.py", line 199, in run
+    self.advance(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 137, in advance
+    output = self._evaluation_step(**kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 234, in _evaluation_step
+    output = self.trainer._call_strategy_hook(hook_name, *kwargs.values())
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1494, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/strategies/ddp.py", line 359, in validation_step
+    return self.model(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 230, in forward
+    return self.module(*inputs, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/overrides/base.py", line 110, in forward
+    return self._forward_module.validation_step(*inputs, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/ddpm3d_maskgen.py", line 1212, in validation_step
+    batch_logs = self.log_images(batch, **self.val_kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/ddpm3d_maskgen.py", line 1318, in log_images
+    samples, z_denoise_row = self.sample_log(cond=c, batch_size=N, ddim=use_ddim,
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/ddpm3d_maskgen.py", line 1026, in sample_log
+    samples, intermediates = ddim_sampler.sample(ddim_steps, batch_size, shape, cond, verbose=False, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/samplers/ddim.py", line 114, in sample
+    samples, intermediates = self.ddim_sampling(conditioning, size,
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/samplers/ddim.py", line 188, in ddim_sampling
+    outs = self.p_sample_ddim(img, cond, ts, index=index, use_original_steps=ddim_use_original_steps,
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/samplers/ddim.py", line 221, in p_sample_ddim
+    model_output = self.model.apply_model(x, t, c, mask=attn_mask, **kwargs) # unet denoiser
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/ddpm3d_maskgen.py", line 753, in apply_model
+    x_recon = self.model(x_noisy, t, **cond, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/models/ddpm3d_maskgen.py", line 1395, in forward
+    out = self.diffusion_model(xc, t, context=cc, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/networks/openaimodel3d.py", line 587, in forward
+    h = self.init_attn(h, emb, context=context, batch_size=b)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/networks/openaimodel3d.py", line 44, in forward
+    x = layer(x, context)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/attention.py", line 495, in forward
+    x = block(x, mask=mask)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/attention.py", line 320, in forward
+    return checkpoint(self._forward, input_tuple, self.parameters(), self.checkpoint)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/common.py", line 92, in checkpoint
+    return ckpt(func, *inputs, use_reentrant=False)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 251, in checkpoint
+    return _checkpoint_without_reentrant(
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/utils/checkpoint.py", line 432, in _checkpoint_without_reentrant
+    output = function(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/attention.py", line 349, in _forward
+    x = self.ff(self.norm3(x)) + x
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/attention.py", line 547, in forward
+    return self.net(x)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/simurgh2/projects/Mask2IV/Mask2IV/main/../lvdm/modules/attention.py", line 527, in forward
+    return x * F.gelu(gate)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 160.00 MiB (GPU 1; 44.39 GiB total capacity; 37.66 GiB already allocated; 111.38 MiB free; 43.61 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 1388886 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 1 (pid: 1388887) of binary: /simurgh2/users/jesb/conda/envs/dyncraft/bin/python
+Traceback (most recent call last):
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-01-27_12:03:40
+  host      : simurgh1.stanford.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1388887)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Done

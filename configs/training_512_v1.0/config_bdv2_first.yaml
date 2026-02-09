@@ -1,5 +1,5 @@
 model:
-  pretrained_checkpoint: /workspace/exp_outputs/checkpoints/dynamicrafter_512_v1/model_interp.ckpt
+  pretrained_checkpoint: /simurgh2/projects/Mask2IV/checkpoints/pretrained_mask2iv/first_stage/bdv2_model.ckpt
   base_learning_rate: 1.0e-05
   scale_lr: False
   target: lvdm.models.ddpm3d_maskgen.LatentVisualDiffusion
@@ -124,14 +124,14 @@ model:
 data:
   target: utils_data.DataModuleFromConfig
   params:
-    batch_size: 8
+    batch_size: 2
     val_batch_size: 1
     num_workers: null
     wrap: false
     train:
       target: lvdm.data.bdv2.BDV2
       params:
-        meta_path: /workspace/exp_outputs/train_bdv2.csv
+        meta_path: /simurgh2/projects/Mask2IV/Mask2IV/data_csv/train_hand_placement.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true
@@ -144,7 +144,7 @@ data:
     validation:
       target: lvdm.data.bdv2.BDV2
       params:
-        meta_path: /workspace/exp_outputs/test_bdv2.csv
+        meta_path: /simurgh2/projects/Mask2IV/Mask2IV/data_csv/test_hand_placement.csv
         video_length: 16
         frame_stride: 1
         load_raw_resolution: true

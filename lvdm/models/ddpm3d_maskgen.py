@@ -1102,7 +1102,7 @@ class LatentVisualDiffusion(LatentDiffusion):
         
         last_obj_mask = x[:, :, -1]
         # set green channel to -1, no green color for the actor mask
-        last_obj_mask[:, 1] = -1
+        # last_obj_mask[:, 1] = -1
         last_mask_z = self.encode_first_stage(last_obj_mask)
         first_obj_mask = x[:, :, 0]
         # keep green channel because we want it here
@@ -1184,8 +1184,9 @@ class LatentVisualDiffusion(LatentDiffusion):
             if self.object_mode:
                 out.append(obj_mask[:,:,cond_frame_index,...])
             elif self.interp_mode:
-                temp_out = x[:,:,-1]
-                temp_out[:, 1] = -1 
+                # temp_out = x[:,:,-1]
+                temp_out = last_obj_mask
+                # temp_out[:, 1] = -1 
                 out.append(temp_out)
             else:
                 out.append(x[:,:,cond_frame_index,...])

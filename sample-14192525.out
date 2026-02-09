@@ -1,0 +1,104 @@
+SLURM_JOBID=14192525
+SLURM_JOB_NODELIST=simurgh1
+SLURM_NNODES=1
+SLURMTMPDIR=
+working directory = /simurgh2/projects/Mask2IV/Mask2IV
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[rank: 0] Global seed set to 42
+[rank: 1] Global seed set to 42
+@lightning version: 1.9.3 [>=1.8 required]
+***** Configing Model *****
+@lightning version: 1.9.3 [>=1.8 required]
+***** Configing Model *****
+LatentVisualDiffusion: Running in v-prediction mode
+LatentVisualDiffusion: Running in v-prediction mode
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+>>> Load weights from pretrained checkpoint
+INFO:mainlogger:>>> Load weights from pretrained checkpoint
+>>> Load weights from pretrained checkpoint
+INFO:mainlogger:>>> Load weights from pretrained checkpoint
+>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+INFO:mainlogger:>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+Running on 2=1x2 GPUs
+INFO:mainlogger:Running on 2=1x2 GPUs
+***** Configing Data *****
+INFO:mainlogger:***** Configing Data *****
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+train, HOI4D, 11851
+INFO:mainlogger:train, HOI4D, 11851
+validation, HOI4D, 11851
+INFO:mainlogger:validation, HOI4D, 11851
+***** Configing Trainer *****
+INFO:mainlogger:***** Configing Trainer *****
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/strategies/sharded.py:45: LightningDeprecationWarning: PyTorch Lightning's sharded implementation using FairScale has been deprecated in v1.9.0 and will be removed in v2.0.0. You can try using the `Trainer(strategy='fsdp_native')` instead. The difference is that native FSDP uses PyTorch's implementation and the current strategy uses FairScale's implementation (which was upstreamed to PyTorch). After removal, `strategy='fsdp'` will use the native version by default.
+  rank_zero_deprecation(
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/lightning_fabric/plugins/environments/slurm.py:166: PossibleUserWarning: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py - ...
+  rank_zero_warn(
+Using 16bit None Automatic Mixed Precision (AMP)
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/pytorch_lightning/plugins/precision/sharded_native_amp.py:36: LightningDeprecationWarning: PyTorch Lightning's sharded implementation using FairScale has been deprecated in v1.9.0 and will be removed in v2.0.0. You can try using the `Trainer(strategy='fsdp_native')` instead. The difference is that native FSDP uses PyTorch's implementation and the current strategy uses FairScale's implementation (which was upstreamed to PyTorch). After removal, `strategy='fsdp'` will use the native version by default.
+  rank_zero_deprecation(
+>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+INFO:mainlogger:>>> Loaded weights from pretrained checkpoint: /simurgh2/projects/Mask2IV/checkpoints/dyncraft/model.ckpt
+Running on 2=1x2 GPUs
+INFO:mainlogger:Running on 2=1x2 GPUs
+***** Configing Data *****
+INFO:mainlogger:***** Configing Data *****
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+***** Running the Loop *****
+INFO:mainlogger:***** Running the Loop *****
+<Training in DDPSharded Mode>
+INFO:mainlogger:<Training in DDPSharded Mode>
+/simurgh2/users/jesb/conda/envs/dyncraft/lib/python3.8/site-packages/lightning_fabric/plugins/environments/slurm.py:166: PossibleUserWarning: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /simurgh2/projects/Mask2IV/Mask2IV/main/trainer.py - ...
+  rank_zero_warn(
+[rank: 0] Global seed set to 42
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+>>> 11851 data samples loaded.
+>>> 11851 data samples loaded.
+train, HOI4D, 11851
+INFO:mainlogger:train, HOI4D, 11851
+validation, HOI4D, 11851
+INFO:mainlogger:validation, HOI4D, 11851
+***** Configing Trainer *****
+INFO:mainlogger:***** Configing Trainer *****
+***** Running the Loop *****
+INFO:mainlogger:***** Running the Loop *****
+<Training in DDPSharded Mode>
+INFO:mainlogger:<Training in DDPSharded Mode>
+[rank: 1] Global seed set to 42
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/2
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA L40S') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2026-01-27T10:18:26.086] error: *** JOB 14192525 ON simurgh1 CANCELLED AT 2026-01-27T10:18:26 DUE to SIGNAL Terminated ***

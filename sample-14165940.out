@@ -1,0 +1,6 @@
+SLURM_JOBID=14165940
+SLURM_JOB_NODELIST=simurgh3
+SLURM_NNODES=1
+SLURMTMPDIR=
+working directory = /simurgh2/projects/Mask2IV/Mask2IV
+[2026-01-26T17:55:40.968] error: *** JOB 14165940 ON simurgh3 CANCELLED AT 2026-01-26T17:55:40 DUE to SIGNAL Terminated ***

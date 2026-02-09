@@ -15,7 +15,7 @@ else
 fi
 
 # save_root="<YOUR_SAVE_ROOT_DIR>", for logs, checkpoints, tensorboard record, etc.
-save_root="/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/first_stage/$1"
+save_root="/simurgh2/projects/Mask2IV/Mask2IV/exp_outputs/first_stage_bd_cpr_1/$1"
 
 # run in multiple gpus
 HOST_GPU_NUM=2
